@@ -1,60 +1,122 @@
+$font-stack: 'Open Sans',
+sans-serif;
+$primary-color: #333;
+$secundary-color: #232020;
+$light-color: #E3E3E3;
+$darker-color: #161616;
+$highlight-color: #C50000;
+$normal-font-size: 18px;
+$large-font-size: 26px;
+$larger-font-size: 40px;
 * {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-}
-
-.current {
-    border-bottom: 2px;
-    border-color: #C50000;
+    font-family: $font-stack !important;
+    font-size: 18px;
 }
 
 body {
     margin: 0px;
+    background-color: $light-color;
 }
 
-header {
+.current {
+    font-weight: 800;
+}
+
+.nav-bar {
     display: flex;
     height: 60px;
-    background-color: #444444;
+    background-color: $secundary-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     justify-content: space-between;
     align-items: center;
 }
 
-nav a {
-    color: #E3E3E3;
-    flex-grow: 4;
-    text-decoration: none;
-    float: left;
-    margin-left: 20px;
+nav {
+    margin-right: 40px !important;
+    a {
+        font-size: 18px;
+        color: #E3E3E3;
+        flex-grow: 4;
+        text-decoration: none;
+        margin-right: 30px;
+    }
 }
 
 .nav-icon {
-    margin-right: 20px;
+    margin-right: 5px;
+    img {
+        width: 30px;
+        height: 30px;
+    }
 }
 
-.nav-icon img {
-    width: 30px;
-    height: 30px;
+.scanapi-logo {
+    background-color: $darker-color;
+    width: 100px;
+    height: 70px;
+    border-radius: 70px;
+    margin-left: 100px;
+    margin-top: 51px;
+    position: relative;
+    z-index: 10;
+    padding: 10px;
 }
 
 .cover {
     height: 28em;
-    background-color: #EEEEEE;
+    background-image: url('/assets/images/1.jpg');
     display: flex;
-    align-items: center;
-    color: #C50000;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    color: $light-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 40px;
+    h1 {
+        font-size: 56px;
+        width: 600px;
+        margin-left: 100px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    h2 {
+        margin-left: 100px;
+        font-size: $larger-font-size;
+        width: 600px;
+    }
+    a {
+        width: 150px;
+        margin-left: 100px;
+        background-color: $light-color;
+        margin-top: 1%;
+        text-decoration: none;
+        color: $darker-color;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        font-size: $normal-font-size;
+    }
 }
 
-.cover h1 {
-    font-size: 40px;
-    width: 600px;
-    margin-left: 100px;
-    font-weight: 700;
-}
-
-.cover img {
-    width: 30%;
-    margin-right: 10%;
+.main-infos {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+    .why {
+        display: flex;
+        justify-content: space-around;
+        font-size: $large-font-size;
+        p {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img {
+            width: 150px;
+        }
+    }
+    h2 {
+        font-size: $larger-font-size;
+        margin-bottom: 10px;
+    }
 }
