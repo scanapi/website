@@ -1,6 +1,3 @@
-$font-stack: 'Open Sans',
-sans-serif;
-$primary-color: #333;
 $secundary-color: #232020;
 $light-color: #E3E3E3;
 $darker-color: #161616;
@@ -9,7 +6,7 @@ $normal-font-size: 18px;
 $large-font-size: 26px;
 $larger-font-size: 40px;
 * {
-    font-family: $font-stack !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
     font-size: 18px;
 }
 
@@ -62,61 +59,30 @@ nav {
     padding: 10px;
 }
 
-.cover {
-    height: 28em;
-    background-image: url('/assets/images/1.jpg');
+.footer {
+    background-color: $secundary-color;
+    color: $light-color;
+    width: 100%;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: $light-color;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 40px;
-    h1 {
-        font-size: 56px;
-        width: 600px;
-        margin-left: 100px;
-        font-weight: 700;
+    align-items: center;
+    .footer-icons {
         margin-bottom: 10px;
-    }
-    h2 {
-        margin-left: 100px;
-        font-size: $larger-font-size;
-        width: 600px;
     }
     a {
-        width: 150px;
-        margin-left: 100px;
-        background-color: $light-color;
-        margin-top: 1%;
+        color: $highlight-color;
         text-decoration: none;
-        color: $darker-color;
-        border-radius: 20px;
-        padding: 10px;
-        text-align: center;
-        font-size: $normal-font-size;
     }
-}
-
-.main-infos {
-    width: 80%;
-    margin: auto;
-    margin-bottom: 10px;
-    .why {
+    p {
         display: flex;
-        justify-content: space-around;
-        font-size: $large-font-size;
-        p {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        img {
-            width: 150px;
-        }
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
     }
-    h2 {
-        font-size: $larger-font-size;
-        margin-bottom: 10px;
+    p span {
+        margin: 2px;
     }
 }
