@@ -1,0 +1,88 @@
+$secundary-color: #232020;
+$light-color: #E3E3E3;
+$darker-color: #161616;
+$highlight-color: #C50000;
+$normal-font-size: 18px;
+$large-font-size: 26px;
+$larger-font-size: 40px;
+* {
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-size: 18px;
+}
+
+body {
+    margin: 0px;
+    background-color: $light-color;
+}
+
+.current {
+    font-weight: 800;
+}
+
+.nav-bar {
+    display: flex;
+    height: 60px;
+    background-color: $secundary-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    margin-right: 40px !important;
+    a {
+        font-size: 18px;
+        color: #E3E3E3;
+        flex-grow: 4;
+        text-decoration: none;
+        margin-right: 30px;
+    }
+}
+
+.nav-icon {
+    margin-right: 5px;
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.scanapi-logo {
+    background-color: $darker-color;
+    width: 100px;
+    height: 70px;
+    border-radius: 70px;
+    margin-left: 100px;
+    margin-top: 51px;
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+}
+
+.footer {
+    background-color: $secundary-color;
+    color: $light-color;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .footer-icons {
+        margin-bottom: 10px;
+    }
+    a {
+        color: $highlight-color;
+        text-decoration: none;
+    }
+    p {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+    p span {
+        margin: 2px;
+    }
+}

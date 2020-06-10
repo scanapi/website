@@ -1,0 +1,26 @@
+<!doctype html>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+<header>
+<div class="nav-bar">
+    <a href="/"><img class="scanapi-logo" src="/assets/images/scanapi.svg"/></a>
+    {% include navigation.html %}
+</div>
+</header>
+
+    {{ content }}
+
+{% include footer.html %}
+</body>
+
+</html>

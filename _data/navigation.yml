@@ -1,0 +1,10 @@
+- name: Home
+  link: /
+- name: Docs
+  link: /docs.html
+- name: Tutorial
+  link: /tutorial.html
+- name: Report templates
+  link: /templates.html
+- name: Community
+  link: /community.html
