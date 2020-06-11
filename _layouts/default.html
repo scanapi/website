@@ -6,15 +6,18 @@
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/scanapi.svg">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 600px)" href="/assets/css/narrow-styles.css">
 </head>
 
 <body>
 
 <header>
 <div class="nav-bar">
-    <a href="/"><img class="scanapi-logo" src="/assets/images/scanapi.svg"/></a>
+    <a class="scanapi-logo" href="/"><img src="/assets/images/scanapi.svg"/> Scanapi </a>
     {% include navigation.html %}
+    {%include sandwich-navigation.html%}
 </div>
 </header>
 
