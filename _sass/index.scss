@@ -1,3 +1,8 @@
+section {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
 .cover {
     height: 25em;
     background-image: url('/assets/images/cover.jpg');
@@ -39,11 +44,6 @@
     }
 }
 
-section {
-    width: 80%;
-    margin: auto;
-}
-
 .main-infos {
     width: 80%;
     margin: auto;
@@ -60,8 +60,8 @@ section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 25%;
-            min-width: 400px;
+            width: 20%;
+            min-width: 300px;
             text-align: center;
             line-height: 1.5;
             margin-bottom: 40px;
@@ -72,8 +72,7 @@ section {
     }
 }
 
-.sec1 {
-    width: 100%;
+.section-reports {
     height: 600px;
     display: flex;
     align-items: center;
@@ -81,7 +80,6 @@ section {
     img {
         width: 40%;
         margin-left: 100px;
-        margin-right: 100px;
     }
     div {
         display: flex;
@@ -98,8 +96,7 @@ section {
     }
 }
 
-.sec2 {
-    width: 100%;
+.section-integration-tests {
     height: 600px;
     display: flex;
     align-items: center;
@@ -107,7 +104,6 @@ section {
     img {
         width: 40%;
         margin-right: 100px;
-        margin-left: 100px;
     }
     div {
         display: flex;

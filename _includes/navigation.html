@@ -1,7 +1,34 @@
-<nav class="default-navigation">
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.url == item.link %} class="current"{% endif %}>{{ item.name }}</a>
-  {% endfor %}
-  <a class="nav-icon" href="https://twitter.com/scanapi_"> <img src="/assets/images/twitter.svg"></a>
-  <a class="nav-icon" href="https://github.com/scanapi/scanapi"><img src='/assets/images/github-logo.svg'></a>
-</nav>
+<header>
+    <div class="nav-bar">
+    <a class="scanapi-logo" href="/"><img src="/assets/images/scanapi.svg" /> Scanapi </a>
+        <nav class="default-navigation">
+            {% for item in site.data.navigation %}
+                <a href="{{ item.link }}" {% if page.url == item.link %} class="current"{% endif %}>{{ item.name }}</a>
+            {% endfor %}
+            
+            <a class="nav-icon" href="https://twitter.com/scanapi_"> <img src="/assets/images/twitter.svg"></a>
+            <a class="nav-icon" href="https://github.com/scanapi/scanapi"><img src='/assets/images/github-logo.svg'></a>
+        </nav>
+        <!--    Made by Erik Terwan    -->
+        <!--   24th of November 2015   -->
+        <!--        MIT License        -->
+        <nav class="sandwich-menu" role="navigation">
+            <div id="menuToggle">
+
+                <input type="checkbox" />
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+
+                <ul id="menu">
+                    {% for item in site.data.navigation %}
+                    <a href="{{ item.link }}" {% if page.url == item.link %} class="current"{% endif %}><li>{{ item.name }}</li></a>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
