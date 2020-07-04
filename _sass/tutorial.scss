@@ -1,0 +1,32 @@
+$darker-color: #161616;
+$primary-color: #FF7163;
+.tutorial {
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    .sidenav {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 30px 40px 20px 50px;
+        padding-right: 10px;
+        text-align: right;
+        border-right: solid 1px #ccc;
+        a {
+            text-decoration: none;
+            color: $darker-color;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+        a:hover {
+            opacity: 0.6;
+        }
+        .current {
+            color: $primary-color;
+        }
+    }
+    .main {
+        width: 100%;
+        margin: 20px 40px 20px 0;
+    }
+}

@@ -6,16 +6,16 @@
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/scanapi.svg">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" media="only screen and (max-device-width: 600px)" href="/assets/css/narrow-styles.css">
+    <link rel="icon" type="image/svg+xml" href="{{"/assets/images/scanapi.svg" | relative_url }}">
+    <link rel="stylesheet" href="{{"/assets/css/styles.css" | relative_url }}">
 </head>
 
 <body>
     {% include navigation.html %}
 
-    {{ content }}
-
+    <div class="content">
+        {{ content }}
+    </div>
     {% include footer.html %}
 </body>
 

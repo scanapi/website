@@ -5,7 +5,7 @@ section {
 
 .cover {
     height: 25em;
-    background-image: url('/assets/images/cover.jpg');
+    background-image: url("https://raw.githubusercontent.com/scanapi/website/master/assets/images/cover.jpg");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,7 +73,7 @@ section {
 }
 
 .section-reports {
-    height: 600px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -97,7 +97,7 @@ section {
 }
 
 .section-integration-tests {
-    height: 600px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: flex-start;

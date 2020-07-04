@@ -1,0 +1,11 @@
+baseurl: /website
+
+collections:
+    tutorial_pages:
+      output: true
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
