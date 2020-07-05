@@ -1,6 +1,6 @@
 - name: Home
   link: /
 - name: Docs
-  link: /docs.html
+  link: /docs_v1/config.html
 - name: Tutorial
-  link: /tutorial_pages/page1.html
+  link: /tutorials/page1.html

@@ -1,7 +1,9 @@
 baseurl: /website
 
 collections:
-    tutorial_pages:
+    tutorials:
+      output: true
+    docs_v1:
       output: true
 
 markdown: kramdown
