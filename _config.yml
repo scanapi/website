@@ -1,10 +1,8 @@
-baseurl: /website
-
 collections:
-    tutorials:
-      output: true
-    docs_v1:
-      output: true
+  tutorials:
+    output: true
+  docs_v1:
+    output: true
 
 markdown: kramdown
 
