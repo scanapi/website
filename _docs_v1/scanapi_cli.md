@@ -1,0 +1,27 @@
+---
+layout: docs
+title: ScanAPI - Configuration
+name: ScanAPI CLI
+active_page: scanapi_cli
+section: Configuration
+---
+
+# ScanAPI CLI
+
+```
+$ scanapi --help
+Usage: scanapi [OPTIONS] [SPEC_PATH]
+
+  Automated Testing and Documentation for your REST API. SPEC_PATH argument
+  is the API specification file path.
+
+Options:
+  -o, --output-path PATH          Report output path.
+  -c, --config-path PATH          Configuration file path.
+  -t, --template PATH             Custom report template path.
+  -ll, --log-level [DEBUG|INFO|WARNING|ERROR|CRITICAL]
+                                  Set the debug logging level for the program.
+  -h, --help                      Show this message and exit.
+```
+
+
