@@ -100,8 +100,8 @@ You can find complete examples at [scanapi/examples][scanapi-examples]!
 ### ScanAPI CLI
 
 ```
-$ scanapi --help
-Usage: scanapi [OPTIONS] [SPEC_PATH]
+$ scanapi run --help
+Usage: scanapi run [OPTIONS] [SPEC_PATH]
 
   Automated Testing and Documentation for your REST API. SPEC_PATH argument
   is the API specification file path.
