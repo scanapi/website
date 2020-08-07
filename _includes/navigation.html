@@ -5,6 +5,7 @@
             {% for item in site.data.navigation %}
                 <a href="{{ item.link | relative_url}}" {% if page.url == item.link %} class="current"{% endif %}>{{ item.name }}</a>
             {% endfor %}
+            <a href="https://github.com/scanapi/examples">Examples</a>
 
             <a class="nav-icon" href="https://twitter.com/scanapi_"> <img src="{{ "/assets/images/twitter.svg" | relative_url }}"></a>
             <a class="nav-icon" href="https://github.com/scanapi/scanapi"><img src="{{ "/assets/images/github-logo.svg" | relative_url }}"></a>
