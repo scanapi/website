@@ -16,7 +16,7 @@ requests:
   - name: list_all
     method: get
     vars:
-      dev_id: ${{response.json()[2]["uuid"]}}
+      dev_id: {% raw %} ${{response.json()[2]["uuid"]}} {% endraw %}
 ```
 
 The dev_id variable will receive the `uuid` value of the 3rd result from the devs_list_all request

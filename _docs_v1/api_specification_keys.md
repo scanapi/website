@@ -24,4 +24,4 @@ section: Specification
 | vars             | Key used to define your custom variables to be used along the specification                           | dict   | endpoint, request                 |
 | ${custom var}    | Syntax to get the value of the custom variables defined at key `vars`                                 | string | request - after `vars` definition |
 | ${ENV_VAR}       | Syntax to get the value of an environment variable                                                    | string | endpoint, request                 |
-| ${{python_code}} | Syntax to get the value of a Python code expression                                                   | string | request                           |
+| $\{\{python_code\}\} | Syntax to get the value of a Python code expression                                                   | string | request                           |

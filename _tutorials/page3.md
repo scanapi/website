@@ -5,7 +5,4 @@ name: Chaining requests
 active_page: page3
 ---
 
-Uuuuhuuuuuuuhhhhh
-nsadnadnasjkd
-
-
+## Part 3
