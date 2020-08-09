@@ -13,7 +13,7 @@ file.
 
 ```yaml
 report:
-  hide-request:
+  hide_request:
     headers:
       - Authorization
 ```
@@ -25,7 +25,7 @@ In the same way you can omit sensitive information from response.
 
 ```yaml
 report:
-  hide-response:
+  hide_response:
     headers:
       - Authorization
 ```

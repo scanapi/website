@@ -2,5 +2,5 @@
   link: /
 - name: Docs
   link: /docs_v1/config.html
-- name: Tutorial
-  link: /tutorials/page1.html
+# - name: Tutorial
+#   link: /tutorials/page1.html

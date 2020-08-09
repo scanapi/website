@@ -23,7 +23,7 @@ api:
           method: get
           tests:
             - name: status_code_is_200
-              assert: ${{ response.status_code == 200 }}
+              assert: {% raw %} ${{ response.status_code == 200 }} {% endraw %}
 ```
 
 This specification follows a tree structure.
@@ -199,4 +199,4 @@ type: dict
 | vars             | Key used to define your custom variables to be used along the specification                         | dict   | endpoint, request                 |
 | ${custom var}    | A syntax to get the value of the custom variables defined at key `vars`                             | string | request - after `vars` definition |
 | ${ENV_VAR}       | A syntax to get the value of an environment variable                                                | string | endpoint, request                 |
-| ${{python_code}} | A syntax to get the value of a Python code expression                                               | string | request                           |
+| $\{\{python_code\}\} | A syntax to get the value of a Python code expression                                               | string | request                           |
