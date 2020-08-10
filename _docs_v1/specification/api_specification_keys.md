@@ -1,9 +1,12 @@
 ---
 layout: docs
-title: API Specification Keys - Specification
-name: API Specification Keys
+title: ScanAPI - Documentation
+
+page_name: API Specification Keys
 active_page: api_specification_keys
+
 section: Specification
+index: 1
 ---
 
 # API Specification Keys

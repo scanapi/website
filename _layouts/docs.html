@@ -1,20 +1,31 @@
---- 
+---
 layout: default
 title: ScanAPI - Documentation
 ---
+
 <link rel="stylesheet" href="{{"/assets/css/docs.css" | relative_url}}"">
 <div class="docs">
     <div class="sidenav">
-    {% assign all_sections = site.docs_v1 | map: "section" | uniq %}
-    
-    {% for section in all_sections %}
-        <h2>{{section}}</h2>
-        {% assign docs = site.docs_v1 | where: "section",section %}
+    {% assign docs_pages = site.pages | where: "page_name","Quick Start" %}
+    {% assign docs_pages = docs_pages | concat: site.docs_v1 %}
+    {% assign sections = site.data.doc_sections %}
+
+    {% for section in sections %}
+        <h2>{{section.name}}</h2>
+        {% assign docs = docs_pages | where: "section",section.name %}
+        {% assign docs = docs | sort: "index" %}
         {% for doc in docs %}
-            <a {% if page.url == doc.url %} class="current"{% endif %} href="{{ doc.url | relative_url }}">{{ doc.name }}</a>
+            <a
+                {% if page.url == doc.url %}
+                    class="current"
+                {% endif %}
+                href="{{ doc.url | relative_url }}">
+                {{ doc.page_name }}
+            </a>
         {% endfor %}
     {% endfor %}
     </div>
+
     <!-- Page content -->
     <div class="main">
         {{ content }}

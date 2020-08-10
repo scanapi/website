@@ -1,9 +1,12 @@
 ---
 layout: docs
-title: Custom Variables - Specification
-name: Custom Variables
+title: ScanAPI - Documentation
+
+page_name: Custom Variables
 active_page: custom_variables
+
 section: Specification
+index: 4
 ---
 
 # Custom Variables

@@ -1,9 +1,12 @@
 ---
 layout: docs
-title: Chaining Requests - Specification
-name: Chaining Requests
+title: ScanAPI - Documentation
+
+page_name: Chaining Requests
 active_page: chaining_requests
+
 section: Specification
+index: 5
 ---
 
 # Chaining Requests

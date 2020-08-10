@@ -1,9 +1,12 @@
 ---
 layout: docs
 title: ScanAPI - Documentation
-name: Basic Structure
+
+page_name: Basic Structure
 active_page: basic_structure
+
 section: Specification
+index: 0
 ---
 
 # Basic Structure
