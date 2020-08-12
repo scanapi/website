@@ -14,12 +14,24 @@ title: ScanAPI - Automated Integration Testing and Live Documentation for your A
 
 <section class="main-infos">
     <div class="why-scanapi">
-        <div><img src="{{ "/assets/images/confirm.svg" | relative_url }}"><h3>API contracts tested</h3>Guarantee the
-            quality of the data that is being consumed or used. Ensure that communication between services is occurring as expected. Ensure the system does, in fact, what it should do.
+        <div>
+            <img src="{{ "/assets/images/confirm.svg" | relative_url }}">
+            <h3>API contracts tested</h3>
+            Guarantee the quality of the data that is being consumed or used.
+            Ensure that communication between services is occurring as expected.
+            Ensure the system does, in fact, what it should do.
         </div>
-        <div><img src="{{ "/assets/images/dependency.svg" | relative_url }}"><h3>Nested requests</h3>Use the response of the previous request to build the next. Making it easy to debug complex scenarios of chained requests.
+        <div>
+            <img src="{{ "/assets/images/dependency.svg" | relative_url }}">
+            <h3>Nested requests</h3>
+            Use the response of the previous request to build the next.
+            Making it easy to debug complex scenarios of chained requests.
         </div>
-        <div><img src="{{ "/assets/images/api.svg" | relative_url }}"><h3>Live Documentation</h3> ScanAPI will keep your API documentation always updated, making it easier for consumers to understand what in fact the API does.
+        <div>
+            <img src="{{ "/assets/images/api.svg" | relative_url }}">
+            <h3>Live Documentation</h3>
+            ScanAPI will keep your API documentation always updated.
+            No more misinformation or outdated documentation.
         </div>
     </div>
 </section>
@@ -28,7 +40,9 @@ title: ScanAPI - Automated Integration Testing and Live Documentation for your A
     <div>
         <h2>Reports</h2>
         <p>The Reports can be generated on demand, via command line, or added to your CI pipeline and generated as an artifact.</p>
-        <p> Reports can be customized to fit your style. You only have to provide your own Jinja Template.</p>
+        <p>Reports can be customized to fit your style. You only need to provide your own Jinja Template.</p>
+        <p>Hide sensitive information in the reports. You do not want to show your secrets, right? </p>
+        <p>For each request, you have access to the exactly cURL to reproduce it again. </p>
     </div>
     <img src="{{"/assets/images/scanapi-report.png" | relative_url }}">
 </section>
@@ -37,10 +51,19 @@ title: ScanAPI - Automated Integration Testing and Live Documentation for your A
     <img src="{{"/assets/images/tests.png" | relative_url }}">
     <div>
         <h2>Integration tests</h2>
-        <h3>Why?</h3>
-        <p>define endpoints to be hit, the expected behaviors for each response, and, as a result, receives a full real-time diagnostic of the API</p>
+        <h3>How?</h3>
+        <p>
+            Define endpoints to be hit, the expected behaviors for each response, and, as a result, receives a full real-time diagnostic of your API.
+        </p>
         <h3>Really?</h3>
-        <p>define endpoints to be hit, the expected behaviors for each response, and, as a result, receives a full real-time diagnostic of the API</p>
+        <p>
+            A flexible and extensible API specification syntax.
+            The spec supports environment variables, custom variables, chain requests and Python code.
+        </p>
+        <h3>Why?</h3>
+        <p>
+            Be the first to be notified if any API endpoint is not working as expected.
+        </p>
     </div>
 
 </section>
