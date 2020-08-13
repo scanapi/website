@@ -1,10 +1,10 @@
-# ScanAPI Website
+![](https://github.com/scanapi/design/raw/master/images/github-hero-dark.png)
 
-⚠️ WORKING IN PROGRESS repo! ⚠️
+# ScanAPI Website
 
 Website for [ScanAPI](https://github.com/scanapi/scanapi) testing framework.
 
-Available at: https://scanapi.dev
+Available at: [scanapi.dev](https://scanapi.dev)
 
 ## Tech Stack
 - Jekyll
