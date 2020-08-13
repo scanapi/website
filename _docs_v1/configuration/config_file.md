@@ -1,9 +1,12 @@
 ---
 layout: docs
 title: ScanAPI - Documentation
-name: Configuration File
-active_page: config
+
+page_name: Configuration File
+active_page: config_file
+
 section: Configuration
+index: 1
 ---
 
 # Configuration File

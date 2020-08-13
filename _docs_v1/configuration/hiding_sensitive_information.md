@@ -1,9 +1,12 @@
 ---
 layout: docs
-title: Hiding Sensitive Information - Configuration
-name: Hiding Sensitive Information
+title: ScanAPI - Documentation
+
+page_name: Hiding Sensitive Information
 active_page: hiding_sensitive_information
+
 section: Configuration
+index: 2
 ---
 
 # Hiding Sensitive Information

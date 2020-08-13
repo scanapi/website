@@ -1,0 +1,69 @@
+---
+layout: docs
+title: ScanAPI - Documentation
+
+page_name: Quick Start
+active_page: quick_start
+
+section: Getting Started
+index: 0
+---
+
+# Quick Start
+
+## Requirements
+
+- [pip][pip-installation]
+
+## How to install
+
+```bash
+$ pip install scanapi
+```
+
+## Basic Usage
+
+You will need to write the API's specification and save it as a **YAML** or **JSON** file.
+For example:
+
+```yaml
+endpoints:
+  - name: scanapi-demo # The API's name of your API
+    path: http://demo.scanapi.dev/api/ # The API's base url
+    requests:
+      - name: list_all_devs # The name of the first request
+        path: devs/ # The path of the first request
+        method: get # The HTTP method of the first request
+        tests:
+          - name: status_code_is_200 # The name of the first test for this request
+            assert: {% raw %} ${{ response.status_code == 200 }} {% endraw %} # The assertion
+
+```
+
+And run the scanapi command
+
+```bash
+$ scanapi run <file_path>
+```
+
+Then, the lib will hit the specified endpoints and generate a `scanapi-report.html` file with the report results.
+
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/scanapi/scanapi/master/images/report-print-closed.png"
+    width="700"
+    alt="An overview screenshot of the report."
+  >
+  <img
+    src="https://raw.githubusercontent.com/scanapi/scanapi/master/images/report-print-request.png"
+    width="700"
+    alt="A screenshot of the report showing the request details."
+  >
+  <img
+    src="https://raw.githubusercontent.com/scanapi/scanapi/master/images/report-print-response.png"
+    width="700"
+    alt="A screenshot of the report showing the response and test details"
+  >
+</p>
+
+[pip-installation]: https://pip.pypa.io/en/stable/installing/

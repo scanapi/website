@@ -1,9 +1,12 @@
 ---
 layout: docs
-title: API Specification in Multiple Files - Specification
-name: API Specification in Multiple Files
+title: ScanAPI - Documentation
+
+page_name: API Specification in Multiple Files
 active_page: api_spec_in_multiple_files
+
 section: Specification
+index: 6
 ---
 
 # API Specification in Multiple Files

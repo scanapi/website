@@ -1,9 +1,12 @@
 ---
 layout: docs
-title: Environment Variables - Specification
-name: Environment Variables
+title: ScanAPI - Documentation
+
+page_name: Environment Variables
 active_page: environment_variables
+
 section: Specification
+index: 3
 ---
 
 # Environment Variables

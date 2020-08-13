@@ -1,12 +1,15 @@
 ---
 layout: docs
-title: ScanAPI - Configuration
-name: ScanAPI CLI
+title: ScanAPI - Documentation
+
+page_name: Command Line Interface - CLI
 active_page: scanapi_cli
+
 section: Configuration
+index: 0
 ---
 
-# ScanAPI CLI
+# Command Line Interface - CLI
 
 ```
 $ scanapi run --help
@@ -23,5 +26,3 @@ Options:
                                   Set the debug logging level for the program.
   -h, --help                      Show this message and exit.
 ```
-
-

@@ -1,9 +1,12 @@
 ---
 layout: docs
-title: Python Code - Specification
-name: Python Code
+title: ScanAPI - Documentation
+
+page_name: Python Code
 active_page: python_code
+
 section: Specification
+index: 2
 ---
 
 # Python Code
