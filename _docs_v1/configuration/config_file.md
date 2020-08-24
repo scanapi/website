@@ -11,7 +11,7 @@ index: 1
 
 # Configuration File
 
-If you want to configure the ScanAPI with a file, you can create a `.scanapi.yaml` file in the root of your project
+If you want to configure the ScanAPI with a file, you can create a local `scanapi.conf` file where you are running the ScanAPI CLI or a global `scanapi.conf` file following the XDG Base Directory Specification.
 
 ```yaml
 project_name: DemoAPI # This will be rendered in the Report Title.
