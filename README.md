@@ -8,4 +8,4 @@ Available at: [scanapi.dev](https://scanapi.dev)
 
 ## Tech Stack
 - Jekyll
-- Deploy on GitHub Pages
+- Deploys by [Netlify](https://www.netlify.com)
