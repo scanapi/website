@@ -11,8 +11,7 @@ index: 2
 
 # Hiding Sensitive Information
 
-If you want to omit sensitive information in the report, you can configure it in the `.scanapi.yaml`
-file.
+If you want to omit sensitive information in the report, you can configure it in the `scanapi.conf` file.
 
 ```yaml
 report:
