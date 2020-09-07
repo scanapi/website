@@ -7,5 +7,5 @@ Website for [ScanAPI](https://github.com/scanapi/scanapi) testing framework.
 Available at: [scanapi.dev](https://scanapi.dev)
 
 ## Tech Stack
-- Jekyll
+- [Jekyll](https://jekyllrb.com)
 - Deploys by [Netlify](https://www.netlify.com)
