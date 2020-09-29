@@ -162,6 +162,6 @@ type: list
 
 Key used to define your custom variables to be used along the specification.
 
-Read more about [custom variables](#vars).
+Read more about [custom variables](https://scanapi.dev/docs_v1/specification/custom_variables.html).
 
 type: dict
