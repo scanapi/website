@@ -162,6 +162,6 @@ type: list
 
 Key used to define your custom variables to be used along the specification.
 
-Read more about [custom variables](#todo).
+Read more about [custom variables](#vars).
 
 type: dict
