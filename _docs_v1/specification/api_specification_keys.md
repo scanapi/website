@@ -15,6 +15,7 @@ index: 1
 | ---------------- | ----------------------------------------------------------------------------------------------------- | ------ | --------------------------------- |
 | assert           | The test assertion                                                                                    | dict   | tests                             |
 | body             | The HTTP body of the request                                                                          | dict   | request                           |
+| delay            | Performs a delay in milliseconds before each request call. (Available for version >= 2.1.0)           | int    | endpoint, request                 |
 | endpoints        | Represents a list of API endpoints                                                                    | list   | endpoint                          |
 | headers          | The HTTP headers                                                                                      | dict   | endpoint, request                 |
 | method           | The HTTP method of the request (GET, POST, PUT, PATCH or DELETE). If not set, GET will be used        | string | request                           |
