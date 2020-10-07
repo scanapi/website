@@ -55,6 +55,7 @@ request = leaf
 
 Each item of the endpoints list has the following keys available:
 
+- \- delay
 - \- endpoints
 - \- headers
 - \- name
@@ -74,6 +75,7 @@ Requests can only be defined under an endpoint.
 Each item of the requests list has the following keys available:
 
 - \- body
+- \- delay
 - \- headers
 - \- method
 - \- name
@@ -109,6 +111,12 @@ syntax: python code
 The content that will be sent as the HTTP request body.
 
 type: dict
+
+## delay
+
+The time in milliseconds to perform a delay before each request call. (Available for version >= 2.1.0)
+
+type: int
 
 ## endpoints
 
