@@ -13,6 +13,7 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 80px;
+    box-shadow: 0px 3px 10px 0px $shadow-color;
     h1 {
         font-size: 56px;
         width: 600px;
@@ -41,6 +42,7 @@ section {
         color: $light-color;
         font-size: $normal-font-size;
         text-transform: uppercase;
+        filter: drop-shadow(4px 3px 5px $shadow-color);
     }
 }
 
@@ -74,13 +76,18 @@ section {
 
 .section-reports {
     width: 80%;
-    height: 400px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding: 5% 10%;
+    margin: 0;
+    background-color: $light-primary-color;
+    box-shadow: 0px 2px 5px 0px $shadow-color;
     img {
         height: 350px;
         margin-left: 10px;
+        filter: drop-shadow(5px 5px 5px $shadow-color);
     }
     div {
         display: flex;
@@ -101,18 +108,23 @@ section {
 .section-integration-tests {
     width:80%;
     margin: auto;
-    height: 400px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 50px;
+    padding: 5% 10%;
+    margin: 0;
     img {
         height: 350px;
         margin-right: 10px;
+        filter: drop-shadow(5px 5px 5px $shadow-color);
+        padding: 0 5%;
     }
     div {
         display: flex;
         flex-direction: column;
+        max-height: 100%;
+        position: relative;
     }
     h2 {
         font-weight: 700;
@@ -123,6 +135,7 @@ section {
     h3 {
         color: $primary-color;
         font-weight: bold;
+        padding: 10px 0px;
     }
     p {
         font-size: $normal-font-size;
