@@ -1,22 +1,45 @@
 <footer class='footer'>
     <div class="footer-contact">
-        <a href="{{ "/" | relative_url }}"><img src="{{"/assets/images/scanapi.svg" | relative_url }}"></a>
+        <a href="{{ '/' | relative_url }}">
+            <img src="{{ '/assets/images/scanapi.svg' | relative_url }}">
+        </a>
         <div class="footer-contact-text">
-            <span>Any help? Contact us via <a href="https://github.com/scanapi/scanapi/issues">GitHub Issues</a> or directly via <a href="mailto:cmaiacd@gmail.com">email</a>.</span>
-            <span>Made with ♥ by <a href="https://github.com/orgs/scanapi/people">ScanAPI Team</a></span>
-            <span>Want to contribute? <a href="https://github.com/scanapi/scanapi/blob/master/CONTRIBUTING.md">Join us</a>!</span>
+            <span>Any help? Contact us via
+                <a href="https://github.com/scanapi/scanapi/issues" target="_blank">
+                    GitHub Issues
+                </a> or directly via <a href="mailto:cmaiacd@gmail.com">email</a>.
+            </span>
+            <span>
+                Made with ♥ by <a href="https://github.com/orgs/scanapi/people" target="_blank">
+                    ScanAPI Team</a>
+            </span>
+            <span>
+                Want to contribute?
+                <a href="https://github.com/scanapi/scanapi/blob/master/CONTRIBUTING.md" target="_blank">
+                    Join us</a>!
+            </span>
         </div>
     </div>
 
     <div class=footer-copyright>
 
         <div class='footer-icons'>
-            <a class="nav-icon" href="https://twitter.com/scanapi_"> <img src="{{"/assets/images/twitter.svg" | relative_url}}"></a>
-            <a class="nav-icon" href="https://github.com/scanapi/scanapi"><img src="{{'/assets/images/github-logo.svg' | relative_url}}"></a>
+            <a class="nav-icon" href="https://twitter.com/scanapi_" target="_blank">
+                <img src="{{ '/assets/images/twitter.svg' | relative_url}}">
+            </a>
+            <a class="nav-icon" href="https://github.com/scanapi/scanapi" target="_blank">
+                <img src="{{'/assets/images/github-logo.svg' | relative_url}}">
+            </a>
         </div>
         <div class="footer-copyright-text">
-            <span>The contents of this website are © 2020 under the terms of the <a href="https://github.com/scanapi/website/blob/master/LICENSE">MIT License</a>. </span>
-            <span>This site is powered by <a href="https://www.netlify.com">Netlify</a>.</span>
+
+            <span>
+                The contents of this website are © {{ 'now' | date: "%Y" }} under the terms of the
+                <a href="https://github.com/scanapi/website/blob/master/LICENSE" target="_blank">
+                    MIT License</a>.
+            </span>
+            <span>This site is powered by <a href="https://www.netlify.com" target="_blank">
+                    Netlify</a>.</span>
         </div>
     </div>
 
