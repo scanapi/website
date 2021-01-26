@@ -1,0 +1,24 @@
+$darker-color: #161616;
+$primary-color: #ff7163;
+.community {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  .sidenav {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 30px 40px 20px 50px;
+    padding-right: 10px;
+    text-align: right;
+    border-right: solid 1px #ccc;
+  }
+  .main {
+    width: 100%;
+    margin: 20px 40px 20px 0;
+    iframe {
+      width: 420px;
+      height: 315px;
+    }
+  }
+}
