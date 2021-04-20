@@ -6,15 +6,44 @@ title: Tutorial
 <div class="tutorial">
     <div class="sidenav">
     {% for tutorial_page in site.tutorials %}
-        <a  {% if page.url == tutorial_page.url %} class="current"{% endif %} href="{{ tutorial_page.url | relative_url }}">{{ tutorial_page.name }}</a>
+        <a
+            {% if page.url == tutorial_page.url %}
+                class="current"
+            {% endif %}
+            href="{{ tutorial_page.url | relative_url }}">
+            {{ tutorial_page.name }}
+        </a>
     {% endfor %}
     </div>
     <!-- Page content -->
     <div class="main">
         {{ content }}
         <div class=pagination>
-                <a> <img src="{{"/assets/images/arrow.svg" | relative_url}}"/>  Previous</a>
-                <a>Next <img src="{{"/assets/images/arrow.svg" | relative_url}}"/></a>
+            {% assign page_number = page.path | slice: -4 | to_integer %}
+
+            {% assign previous_page_number = page_number | minus: 1 %}
+            {% assign previous_page_name = 'page' | append: previous_page_number %}
+            {% assign previous_page_full_path = 'tutorials/' | append: previous_page_name | append: '.html' %}
+
+            {% assign next_page_number = page_number | plus: 1 %}
+            {% assign next_page_name = 'page' | append: next_page_number %}
+            {% assign next_page_full_path = 'tutorials/' | append: next_page_name | append: '.html' %}
+
+            {% if page_number > 1 %}
+                <a href={{ previous_page_full_path | relative_url }}>
+                    <img class="previous" src="{{"/assets/images/arrow.svg" | relative_url}}"/>
+                    {{ page.previous_page_title }}
+                </a>
+            {% else %}
+                <a></a>
+            {% endif %}
+
+            {% if page_number < site.tutorials.size %}
+                <a href={{ next_page_full_path | relative_url }}>
+                    {{ page.next_page_title }}
+                    <img class="next" src="{{"/assets/images/arrow.svg" | relative_url}}"/>
+                </a>
+            {% endif %}
         </div>
     </div>
 </div>

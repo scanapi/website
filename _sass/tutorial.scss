@@ -1,47 +1,45 @@
 $darker-color: #161616;
-$primary-color: #FF7163;
+$primary-color: #ff7163;
 .tutorial {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  .sidenav {
     display: flex;
-    min-height: 100vh;
-    .sidenav {
-        display: flex;
-        flex-direction: column;
-        width: 300px;
-        margin: 30px 40px 20px 50px;
-        padding-right: 10px;
-        text-align: right;
-        border-right: solid 1px #ccc;
-        a {
-            text-decoration: none;
-            color: $darker-color;
-            padding-bottom: 20px;
-            font-weight: bold;
-        }
-        a:hover {
-            opacity: 0.6;
-        }
-        .current {
-            color: $primary-color;
-        }
+    flex-direction: column;
+    width: 300px;
+    margin: 30px 40px 20px 50px;
+    padding-right: 10px;
+    text-align: right;
+    border-right: solid 1px #ccc;
+    a {
+      text-decoration: none;
+      color: $darker-color;
+      padding-bottom: 20px;
+      font-weight: bold;
     }
-    .main {
-        width: 100%;
-        margin: 20px 40px 20px 0;
-        .pagination {
-            display: flex;
-            justify-content: space-between;
-            font-size: 20px;
-            a {
-                img {
-                    width: 25px;
-                }
-            }
-            a:first-of-type {
-                img {
-                    transform: rotate(180deg);
-                }
-            }
-        }
+    a:hover {
+      opacity: 0.6;
     }
+    .current {
+      color: $primary-color;
+    }
+  }
+  .main {
+    width: 100%;
+    margin: 20px 40px 20px 0;
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+      a {
+        img {
+          width: 25px;
+        }
+        img.previous {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
 }
