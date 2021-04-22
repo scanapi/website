@@ -23,6 +23,10 @@ $primary-color: #FF7163;
         .current {
             color: $primary-color;
         }
+        h2 {
+            text-transform: uppercase;
+            font-size: 18px;
+        }
     }
     .main {
         width: 100%;
