@@ -11,7 +11,8 @@ index: 2
 
 # Hiding Sensitive Information
 
-If you want to omit sensitive information in the report, you can configure it in the `scanapi.conf` file.
+If you want to omit sensitive information in the report, you can configure it in the `scanapi.conf`
+file.
 
 ```yaml
 report:
@@ -32,4 +33,4 @@ report:
       - Authorization
 ```
 
-Available attributes to hide: `headers`, `body` and `url`.
+Available attributes to hide: `headers`, `params`, `body`, and `url`.
