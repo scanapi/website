@@ -33,9 +33,11 @@ This specification follows a tree structure.
 One value defined in a node will propagate to it's children, concatenating the values.
 
 In the example above, for instance, the final path of the request will be:
+
 ```
 http://api.example.com/v1/users
 ```
+
 Which is a result of the concatenation of the **sample-api** endpoint path `http://api.example.com/v1` with the **users** request path `/users`.
 
 ```
@@ -81,9 +83,17 @@ Each item of the requests list has the following keys available:
 - \- name
 - \- params
 - \- path
+- \- retry
 - \- tests
 - \- vars
 
+## Retry Section
+
+The retry section is where it will be defined the retry configuration for a request.
+
+### Available keys
+
+- \- max_retries
 
 ## Tests Section
 
@@ -95,7 +105,6 @@ Each item of the tests list has the following keys available:
 
 - \- assert
 - \- name
-
 
 # Specification keys
 
@@ -130,6 +139,12 @@ The content that will be sent as the HTTP request header.
 
 type: dict
 
+## max_retries
+
+A fixed maximum number of retries for a request before it is permanently failed.
+
+type: int
+
 ## method
 
 The HTTP method for the request. Currently the supported methods are GET, POST, PUT, PATCH and DELETE.
@@ -159,6 +174,12 @@ type: string
 It is the key word for the [requests section](#requests-section).
 
 type: list
+
+## retry
+
+It is the key word for the [retry section](#retry-section).
+
+type: dict
 
 ## tests
 
