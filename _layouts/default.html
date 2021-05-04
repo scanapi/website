@@ -1,22 +1,37 @@
-<!doctype html>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+  rel="stylesheet"
+/>
 
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>{{ page.title }}</title>
-    <link rel="icon" type="image/svg+xml" href="{{"/assets/images/scanapi.svg" | relative_url }}">
-    <link rel="stylesheet" href="{{"/assets/css/styles.css" | relative_url }}">
-</head>
+    <link rel="icon" type="image/svg+xml" href="{{"/assets/images/scanapi.svg" |
+    relative_url }}"> <link rel="stylesheet" href="{{"/assets/css/styles.css" |
+    relative_url }}">
+  </head>
 
-<body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-776QFZ9FD8"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-776QFZ9FD8");
+  </script>
+
+  <body>
     {% include navigation.html %}
 
-    <div class="content">
-        {{ content }}
-    </div>
+    <div class="content">{{ content }}</div>
     {% include footer.html %}
-</body>
-
+  </body>
 </html>
