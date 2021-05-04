@@ -22,28 +22,21 @@ body {
 }
 
 .nav-bar {
-    display: flex;
-    height: 60px;
     background-color: $base-gray;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    justify-content: space-between;
-    align-items: center;
     .current {
         color: $primary-color;
         opacity: 1;
     }
 }
 
-nav {
-    margin-right: 100px !important;
-    a {
-        font-size: 18px;
-        color: $light-color;
-        flex-grow: 4;
-        text-decoration: none;
-        margin-right: 30px;
-        opacity: 0.8;
-    }
+.nav-item {
+    font-size: 18px;
+    color: $light-color;
+    flex-grow: 4;
+    text-decoration: none;
+    margin-right: 30px;
+    opacity: 0.8;
 }
 
 .nav-icon {
@@ -55,18 +48,15 @@ nav {
     }
 }
 
-.nav-icon:hover,
-nav a:hover {
+.nav-item:hover {
     opacity: 1;
 }
 
 .scanapi-logo {
-    img {
-        height: 55px;
-        margin-left: 100px;
-        position: relative;
-        z-index: 10;
-    }
+    height: 55px;
+    margin-left: 100px;
+    position: relative;
+    z-index: 10;
 }
 
 .footer {
