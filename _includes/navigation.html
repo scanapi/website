@@ -1,16 +1,16 @@
 <header>
-    <nav class="nav-bar navbar navbar-expand-xl navbar-dark">
+    <nav class="nav-bar navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a href="/">
                 <img class="scanapi-logo" src="{{ "/assets/images/logo-white-on-transparent.png" | relative_url }}"/>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
     
-            <div class="collapse navbar-collapse" id="navbarsExample06">
-                <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+            <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     {% for item in site.data.navigation %}
                         <li>
                             <a href="{{ item.link | relative_url}}"  class="nav-item{% if page.url == item.link %} current{% endif %}">{{ item.name }}</a>
@@ -23,7 +23,7 @@
                         <a class="nav-item" href="https://github.com/marketplace/actions/scanapi", target="_blank">GitHub Action</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="https://marketplace.visualstudio.com/items?itemName=ScanAPI.scanapi", target="_blank">VS Code Plugin</a>
+                        <a class="nav-item" href="https://marketplace.visualstudio.com/items?itemName=ScanAPI.scanapi", target="_blank">VSCode Plugin</a>
                     </li>
                     <li>
                         <a class="nav-item nav-icon" href="https://twitter.com/scanapi_"> <img src="{{ "/assets/images/twitter.svg" | relative_url }}"></a>
