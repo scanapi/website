@@ -1,3 +1,10 @@
+//  Bootstrap breakpoints
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1400px;
+
 $base-gray: #232020;
 $light-color: #FFFFFF;
 $darker-color: #161616;
@@ -22,32 +29,40 @@ body {
 }
 
 .nav-bar {
-    display: flex;
-    height: 60px;
     background-color: $base-gray;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    justify-content: space-between;
-    align-items: center;
-    .current {
+    
+    .current {  
         color: $primary-color;
         opacity: 1;
     }
-}
 
-nav {
-    margin-right: 100px !important;
-    a {
-        font-size: 18px;
-        color: $light-color;
-        flex-grow: 4;
-        text-decoration: none;
-        margin-right: 30px;
-        opacity: 0.8;
+    ul {
+        margin: 0;
+        line-height: 24px;
+        margin-right: 88px;
+    }
+
+    li {
+        margin: 0;
+        a:hover {
+            opacity: 1;
+            color: $light-color;
+        }
     }
 }
 
+.nav-item {
+    font-size: 18px;
+    color: $light-color;
+    flex-grow: 4;
+    text-decoration: none;
+    margin: 0 15px;
+    opacity: 0.8;
+}
+
 .nav-icon {
-    margin-right: 5px;
+    margin: 0 0 0 7px;
     opacity: 0.8;
     img {
         width: 30px;
@@ -55,18 +70,15 @@ nav {
     }
 }
 
-.nav-icon:hover,
-nav a:hover {
+.nav-item:hover {
     opacity: 1;
 }
 
 .scanapi-logo {
-    img {
-        height: 55px;
-        margin-left: 100px;
-        position: relative;
-        z-index: 10;
-    }
+    height: 55px;
+    margin-left: 88px;
+    position: relative;
+    z-index: 10;
 }
 
 .footer {
@@ -74,7 +86,9 @@ nav a:hover {
     color: $light-color;
     width: 100%;
     height: fit-content;
-    line-height: 1.5;
+    line-height: 1.5;     
+    padding: 20px 100px;
+
     .footer-icons {
         margin-bottom: 10px;
     }
@@ -82,19 +96,20 @@ nav a:hover {
         color: $primary-color;
         text-decoration: none;
     }
-    .footer-contact {
-        padding: 20px 0;
-        margin: 0 100px;
+    a:hover {
+        color: $primary-color;
+    }
+    .footer-contact {                
         display: flex;
         justify-content: space-between;
-        .footer-contact-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: right;
-            span {
-                margin: 3px 0;
-            }
+    }
+    .footer-contact-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: right;
+        span {
+            margin: 3px 0;
         }
     }
     .footer-copyright {
@@ -111,6 +126,69 @@ nav a:hover {
         }
         .footer-copyright-text span {
             margin: 2px;
+        }
+    }
+}
+
+@media (max-width: $screen-xxl) {
+    .scanapi-logo {
+        margin-left: 0;
+    }
+
+    .nav-bar {
+        ul {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: $screen-xl) {
+    .nav-item {
+        margin: 0 10px;
+    }
+
+    .nav-icon {
+        margin: 0 0 0 7px;
+    }
+}
+
+
+@media (max-width: $screen-lg) {
+    .nav-bar {
+        text-align: center;
+        
+        li {
+            margin: 8px 0;
+        }
+    }
+    
+    .nav-item {
+        margin: 0 10px;
+    }
+    
+    .nav-icon {
+        margin: 0 0 0 7px;
+    }
+}
+
+
+@media (max-width: $screen-md) {
+    .footer {
+        padding: 20px 20px;
+
+        .footer-contact-text {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-contact {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+    
+        .footer-logo {
+            margin-bottom: 20px;
         }
     }
 }

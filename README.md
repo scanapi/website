@@ -15,7 +15,7 @@ Available at: [scanapi.dev](https://scanapi.dev)
 ### Install
 #### Ruby
 - It is necessary to have ruby to run jekyll, to perform the verification with the following code, run `ruby -v`, if you return the version of ruby, you have it installed on your machine, otherwise install following the steps in documentation [here](https://www.ruby-lang.org/en/downloads/)
-    -  We will not go into details of the ruby installation step by step as it is not the focus!
+    -  We will not go into details of the ruby installation step by step as it is not the focus
 
 ### Jekyll
 -  After installing ruby, [install](https://jekyllrb.com/docs/installation/) jekyll
