@@ -1,6 +1,26 @@
-section {
-    margin-right: 100px;
-    margin-left: 100px;
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+    margin: 0;
+
+    img {
+        max-height: 350px;
+        filter: drop-shadow(5px 5px 5px $shadow-color);
+    }
+
+    h2 {
+        font-weight: 700;
+        color: $primary-color;
+        font-size: $large-font-size;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: $normal-font-size;
+        line-height: 1.5;
+    }
 }
 
 .cover {
@@ -16,26 +36,22 @@ section {
     box-shadow: 0px 3px 10px 0px $shadow-color;
     h1 {
         font-size: 56px;
-        width: 600px;
-        margin-left: 100px;
         font-weight: 700;
         margin-bottom: 10px;
     }
     h2 {
-        margin-left: 100px;
         font-size: $larger-font-size;
-        width: 600px;
+        font-weight: 400;
     }
     .cover-buttons {
         display: flex;
-        margin-left: 100px;
         text-align: center;
     }
     .cover-buttons a {
         padding: 10px;
         background-color: $primary-color;
         width: 150px;
-        margin-top: 2.5%;
+        margin-top: 15px;
         margin-right: 20px;
         border-radius: 20px;
         text-decoration: none;
@@ -44,6 +60,12 @@ section {
         text-transform: uppercase;
         filter: drop-shadow(4px 3px 5px $shadow-color);
     }
+}
+
+.cover-content {
+    padding-left: 100px;
+    max-width: 600px;
+    box-sizing: content-box;
 }
 
 .main-infos {
@@ -75,71 +97,89 @@ section {
 }
 
 .section-reports {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 5% 10%;
-    margin: 0;
     background-color: $light-primary-color;
     box-shadow: 0px 2px 5px 0px $shadow-color;
+
     img {
-        height: 350px;
-        margin-left: 10px;
-        filter: drop-shadow(5px 5px 5px $shadow-color);
+        margin-left: 60px;
     }
     div {
-        display: flex;
-        flex-direction: column;
-    }
-    h2 {
-        font-weight: 700;
-        margin-bottom: 30px;
-        color: $primary-color;
-        font-size: $large-font-size;
-    }
-    p {
-        font-size: $normal-font-size;
-        line-height: 1.5;
+        max-width: 650px;
     }
 }
 
 .section-integration-tests {
-    width:80%;
-    margin: auto;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 5% 10%;
-    margin: 0;
     img {
-        height: 350px;
-        margin-right: 10px;
-        filter: drop-shadow(5px 5px 5px $shadow-color);
-        padding: 0 5%;
+        margin-right: 60px;
     }
     div {
-        display: flex;
-        flex-direction: column;
-        max-height: 100%;
-        position: relative;
-    }
-    h2 {
-        font-weight: 700;
-        color: $primary-color;
-        font-size: $large-font-size;
-        margin-bottom: 30px;
+        max-width: 650px;
     }
     h3 {
         color: $primary-color;
         font-weight: bold;
         padding: 10px 0px;
     }
-    p {
-        font-size: $normal-font-size;
-        line-height: 1.5;
-        margin-bottom: 15px;
+}
+
+@media (max-width: $screen-lg) {
+    .section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .section-reports {
+        flex-direction: column;
+        img {
+            margin-top: 40px;
+            margin-left: 0;
+            max-width: 100%;
+        }
+    }
+
+    .section-integration-tests {
+        flex-direction: column-reverse;
+        img {
+            margin-top: 40px;
+            margin-right: 0;
+            max-width: 100%;
+        }
+    }
+
+    .cover-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .cover-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: $screen-md) {
+    .cover {
+        h1 {
+            font-size: 44px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    .cover-buttons {
+        margin-top: 20px;
+    }
+
+    .main-infos {
+        .why-scanapi {
+            img {
+                height: 100px;
+            }
+        }
     }
 }

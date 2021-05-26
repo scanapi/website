@@ -1,3 +1,10 @@
+//  Bootstrap breakpoints
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1400px;
+
 $base-gray: #232020;
 $light-color: #FFFFFF;
 $darker-color: #161616;
@@ -120,7 +127,7 @@ body {
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: $screen-xxl) {
     .scanapi-logo {
         margin-left: 0;
     }
@@ -132,7 +139,7 @@ body {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: $screen-xl) {
     .nav-item {
         margin: 0 10px;
     }
@@ -143,7 +150,7 @@ body {
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: $screen-lg) {
     .nav-bar {
         text-align: center;
 
@@ -154,5 +161,9 @@ body {
 
     .nav-item {
         margin: 0 10px;
-    }   
+    }
+
+    .nav-icon {
+        margin: 0 0 0 7px;
+    }
 }
