@@ -1,9 +1,10 @@
-$darker-color: #161616;
-$primary-color: #ff7163;
+@import 'main';
+
 .tutorial {
   width: 100%;
   display: flex;
   min-height: 100vh;
+
   .sidenav {
     display: flex;
     flex-direction: column;
@@ -25,6 +26,7 @@ $primary-color: #ff7163;
       color: $primary-color;
     }
   }
+
   .main {
     width: 100%;
     margin: 20px 40px 20px 0;
@@ -40,6 +42,40 @@ $primary-color: #ff7163;
           transform: rotate(180deg);
         }
       }
+      a:hover {
+        color: $primary-color;
+      }
     }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .tutorial {
+    flex-direction: column-reverse;
+    padding: 10px;
+    min-height: auto;
+
+    .sidenav {
+        width: auto;
+        margin: 0;
+        padding: 10px;
+        text-align: left;
+        border: solid 1px #ccc;
+
+        a {
+            padding-bottom: 10px;
+        }
+    }
+
+    .main {
+      .pagination {
+        font-size: 16px;
+        a {
+          img {
+            width: 18px;
+          }
+        }
+      }
+    }    
   }
 }
