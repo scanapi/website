@@ -1,16 +1,9 @@
 ---
 layout: tutorial
-<<<<<<< HEAD
 title: API Sign Up
 name: API Sign Up
 previous_page_title: Setup
 next_page_title: Run
-=======
-title: Snippets API Sign Up
-name: Snippets API Sign Up
-previous_page_title: Setup
-next_page_title: TODO
->>>>>>> f5c21b2 (Tutorial page 2)
 ---
 
 # Snippets API Sign Up
