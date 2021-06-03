@@ -2,7 +2,7 @@
 layout: tutorial
 title: Setup
 name: Setup
-next_page_title: Snippets API Sign Up
+next_page_title: API Sign Up
 ---
 
 # Setup

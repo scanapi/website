@@ -1,9 +1,9 @@
 ---
 layout: tutorial
-title: Snippets API Sign Up
-name: Snippets API Sign Up
+title: API Sign Up
+name: API Sign Up
 previous_page_title: Setup
-next_page_title: Run ScanAPI
+next_page_title: Run
 ---
 
 # Snippets API Sign Up
