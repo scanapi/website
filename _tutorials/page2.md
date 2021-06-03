@@ -3,7 +3,7 @@ layout: tutorial
 title: Snippets API Sign Up
 name: Snippets API Sign Up
 previous_page_title: Setup
-next_page_title: TODO
+next_page_title: Run ScanAPI
 ---
 
 # Snippets API Sign Up
@@ -36,7 +36,7 @@ and this is its highlighted version: [demo.scanapi.dev/api/v1/snippets/2/highlig
 
 <p>
   <img
-    src="/assets/images/tutorial/page1/calculator-highlight.png"
+    src="/assets/images/tutorial/page2/calculator-highlight.png"
     width="200"
     alt="An overview screenshot of the report."
   >
@@ -53,17 +53,17 @@ Visit the [registration page][demo-api-registration] and create a new user:
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page1/registration.png"
-    width="700"
-    alt="An overview screenshot of the report."
+    src="/assets/images/tutorial/page2/registration.png"
+    width="900"
+    alt="User registration form."
   >
 </p>
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page1/registration-complete.png"
-    width="700"
-    alt="An overview screenshot of the report."
+    src="/assets/images/tutorial/page2/registration-complete.png"
+    width="900"
+    alt="User registration complete, returning the user key."
   >
 </p>
 
