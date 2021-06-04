@@ -28,16 +28,16 @@ This is an example of a code snippet:
   "code": "def add(x, y):\r\n    return x + y\r\n\r\ndef subtract(x, y):\r\n    return x - y\r\n\r\ndef multiply(x, y):\r\n    return x * y\r\n\r\ndef divide(x, y):\r\n    return x / y",
   "linenos": true,
   "language": "python",
-  "style": "vs"
+  "style": "emacs"
 }
 ```
 
 and this is its highlighted version: [demo.scanapi.dev/api/v1/snippets/2/highlight/](https://demo.scanapi.dev/api/v1/snippets/2/highlight/)
 
-<p>
+<p align="center">
   <img
     src="/assets/images/tutorial/page2/calculator-highlight.png"
-    width="200"
+    width="500"
     alt="An overview screenshot of the report."
   >
 </p>
