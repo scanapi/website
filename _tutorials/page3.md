@@ -38,18 +38,18 @@ The folder structure should look like this now:
   - scanapi.yaml
 ```
 
-And let's run ScanAPI, so it will hit and document the endpoint specified:
+And let's run ScanAPI, so it will hit and document the specified endpoint:
 
 ```shell
 $ scanapi run
 ```
 
-From the output of the command, we can see that ScanAPI:
+From the output of the command, you can see that ScanAPI:
 
 ```shell
 Loading file scanapi.yaml # loads the specification file you created
 Writing documentation # starts writing the report for your API
-Making request GET http://demo.scanapi.dev/api/v1/health/ # hits the /health endpoint
+Making request GET http://demo.scanapi.dev/api/v1/health/ # makes a GET request to the /health path
 
 The documentation was generated successfully.
 It is available at <your_root_path>/scanapi-report.html # generates the API documentation
