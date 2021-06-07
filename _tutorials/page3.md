@@ -31,7 +31,14 @@ endpoints:
         path: /health/
 ```
 
-And now, let's run ScanAPI, so it will hit and document the endpoint specified:
+The folder structure should look like this now:
+
+```
+- scanapi (root directory)
+  - scanapi.yaml
+```
+
+And let's run ScanAPI, so it will hit and document the endpoint specified:
 
 ```shell
 $ scanapi run
