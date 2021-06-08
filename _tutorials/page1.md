@@ -1,17 +1,40 @@
 ---
 layout: tutorial
-title: Tutorial
-name: How to install
-next_page_title: Creating custom templates
+title: Setup
+name: Setup
+next_page_title: API Sign Up
 ---
 
-# Hello to Tutorial!
+# Setup
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Welcome to ScanAPI's tutorial! This tutorial will guide you on how to test and document an API using
+ScanAPI.
+
+## Installation
+
+ScanAPI is a Python library. For installing ScanAPI, you will need:
+
+- \- [python][python] version 3.6 or higher
+- \- [pip][pip-installation], the standard package manager for Python
+
+If you are new in the Python world, no worries, this
+[Installation & Setup Guide][realpython-setup-guide] can help you with more detailed instructions.
+
+With Python and pip installed, install ScanAPI from the terminal:
 
 ```shell
-echo "hello"
+$ pip install scanapi
 ```
+
+Check that ScanAPI is istalled properly:
+
+```shell
+$ scanapi --version
+scanapi, version 2.3.0
+```
+
+The output should return a version equals or higher 2.3.0.
+
+[pip-installation]: https://pip.pypa.io/en/stable/installing/
+[python]: https://www.python.org/
+[realpython-setup-guide]: https://realpython.com/installing-python/
