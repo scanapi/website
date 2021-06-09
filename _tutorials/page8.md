@@ -8,8 +8,10 @@ next_page_title: Default Values
 
 # Nested Endpoints
 
-In order to clean and reuse our code, one `endpoint` can have multiple `endpoints`. This way,
-we can aggregate requests that have the same route.
+In the ScanAPI specification, each `endpoint` can have multiple endpoints nested into it.
+This feature makes it possible to aggregate requests that have the same route below the same
+endpoint. All the common attributes can be applied directly to the endpoint and they will be
+propagated to the endpoint's children recursively.
 
 Let's see how we could rewrite our specification file `scanapi.yaml` using nested endpoints:
 

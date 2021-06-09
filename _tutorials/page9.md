@@ -18,7 +18,7 @@ spec.
     headers:
       Content-Type: application/json
     requests:
-      - name: healt
+      - name: health
         path: /health/
         tests:
           - name: status_code_is_200
