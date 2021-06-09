@@ -26,7 +26,7 @@ With Python and pip installed, install ScanAPI from the terminal:
 $ pip install scanapi
 ```
 
-Check that ScanAPI is istalled properly:
+Check that ScanAPI is installed properly:
 
 ```shell
 $ scanapi --version
