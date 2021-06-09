@@ -3,7 +3,7 @@ layout: tutorial
 title: Hide Info
 name: Hide Info
 previous_page_title: Env Vars
-next_page_title: TODO
+next_page_title: Chaining Requests
 ---
 
 # Hiding Sensitive Information
