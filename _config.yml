@@ -14,6 +14,7 @@ collections:
       - page10.md
       - page11.md
       - page12.md
+      - page13.md
   docs_v1:
     output: true
 

@@ -65,6 +65,10 @@ Every time you need to load your env vars again, you can just run:
 $ source .env
 ```
 
+> Do not commit your `.env` file, it should not be added to the version control.
+> To avoid any future mistakes, make sure to add `.env` to `.gitignore` so no-one accidentally
+> pushes the `.env` containing secrets to the repository.
+
 ## Using Env Vars
 
 It is time to use the exported env vars in the ScanAPI specification in order to access `/login`.

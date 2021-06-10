@@ -3,7 +3,7 @@ layout: tutorial
 title: Custom Report
 name: Custom Report
 previous_page_title: Project Name
-next_page_title: Add to a Project
+next_page_title: Add to Project
 ---
 
 # Custom Report
