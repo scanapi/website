@@ -111,6 +111,8 @@ Also, this should be the folder structure:
   - snippets.yaml
 ```
 
+Worth notice that you can recursively include files. In our example, the `snippets.yaml` could be composed of as many includes you want.
+
 Awesome, the code is way more clean now. The next step is to add a title to your report!
 
 [docs-include]: /docs_v1/specification/api_spec_in_multiple_files.html
