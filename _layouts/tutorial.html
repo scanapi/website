@@ -19,7 +19,7 @@ title: Tutorial
     <div class="main">
         {{ content }}
         <div class=pagination>
-            {% assign page_number = page.path | slice: -4 | to_integer %}
+            {% assign page_number = page.path | remove_first: "_tutorials/page" | remove_first: ".md" |to_integer %}
 
             {% assign previous_page_number = page_number | minus: 1 %}
             {% assign previous_page_name = 'page' | append: previous_page_number %}
