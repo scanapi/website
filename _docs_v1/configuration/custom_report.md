@@ -93,7 +93,7 @@ The number of `test_results` that got an error in the session.
 {% raw %}
 
 ```jinja
-<span><strong>Number of ERRORS:</strong> {{session.successes}}</span>
+<span><strong>Number of ERRORS:</strong> {{session.errors}}</span>
 ```
 
 {% endraw %}
@@ -115,7 +115,7 @@ The exit code returned by the ScanAPI process.
 The datetime when ScanAPI started to run.
 
 ```jinja
-<span><strong>Started at:</strong> {{ session.started_at }}</span>
+{% raw %}<span><strong>Started at: </strong> {{ session.started_at }}</span>{% endraw %}
 ```
 
 #### elapsed_time()
