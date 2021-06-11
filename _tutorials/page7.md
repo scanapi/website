@@ -24,7 +24,7 @@ Let's create your first code snippet! In the `scanapi.yaml` file, add the `creat
       assert: ${{ response.status_code == 201 }}{% endraw %}
 ```
 
-Putting all together:
+Putting it all together:
 
 ```yaml
 {% raw %}endpoints:
@@ -85,8 +85,8 @@ $ scanapi run
 </p>
 
 Oops, the response is Unauthorized. That makes the test fail and also, we could not create the
-snippet code. To fix it, we need to send the key received in the `/login` response in
-the Authorization headers of `/snippets`.
+snippet code. To fix it, we need to send the **Authentication Token** received in the `/login`
+response in the Authorization headers of `/snippets`.
 
 In the `scanapi.yaml` file, in the `get_token` request, let's store the received key in the `token`
 variable:
@@ -103,7 +103,7 @@ and in the `create_snippet` request, let's send the token in via `Authorization`
   Authorization: Token ${token}{% endraw %}
 ```
 
-Putting all together:
+Putting it all together:
 
 ```yaml
 {% raw %}endpoints:
@@ -216,7 +216,7 @@ and let's create a new request to get the details of your brand new snippet:
       assert: ${{ response.status_code == 200 }}{% endraw %}
 ```
 
-Putting all together:
+Putting it all together:
 
 ```yaml
 {% raw %}endpoints:

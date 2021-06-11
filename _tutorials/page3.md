@@ -35,7 +35,7 @@ The folder structure should look like this now:
 
 ```
 - scanapi (root directory)
-  - scanapi.yaml
+└── scanapi.yaml
 ```
 
 And let's run ScanAPI, so it will hit and document the specified endpoint:
@@ -65,7 +65,7 @@ It is time to check the results! Open the generated file `scanapi-report.html` i
   >
 </p>
 
-Collapse the request component to see more details. First, the details of the request itself:
+Expand the request component to see more details. First, the details of the request itself:
 
 <p align="center">
   <img

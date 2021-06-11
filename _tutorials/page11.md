@@ -15,7 +15,7 @@ APIs. To do so, we need to set the `project_name` in the configuration file `sca
 project_name: Snippets API
 ```
 
-Putting all together:
+Putting it all together:
 
 ```yaml
 project_name: Snippets API

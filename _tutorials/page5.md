@@ -8,22 +8,23 @@ next_page_title: Hide Info
 
 # Environment Variables (env vars)
 
-Once you have already [register an user][docs-sign-up] for the Snippets API, you can test and document
-the `/login` request.
+Once you have already [register an user][docs-sign-up] for the Snippets API, you can test and
+document the `/login` request.
 
-It is not secure to explicitly write your username and password in a plain text. For this reason,
-let's use [environment variables][env-var-definition].
+It is not secure to explicitly write your API's username and password in a plain text.
+For this reason, let's use [environment variables][env-var-definition].
 
 ## Setting Env Vars
 
 Let's set your env vars:
 
 ```shell
-$ export USER=<put_your_username_here>
-$ export PASSWORD=<put_your_password_here>
+$ export USER=<your_snippets_api_username_here>
+$ export PASSWORD=<your_snippets_api_password_here>
 ```
 
-Example:
+The username and the password should be the ones you registered in the
+[API Sign Up page][docs-sign-up]. Example:
 
 ```shell
 $ export USER=my_user
@@ -53,9 +54,9 @@ The folder structure should look like this now:
 
 ```
 - scanapi (root directory)
-  - .env
-  - scanapi-report.html
-  - scanapi.yaml
+|── .env
+|── scanapi-report.html
+|___  scanapi.yaml
 ```
 
 Every time you need to load your env vars again, you can just run:
@@ -70,7 +71,7 @@ It is time to use the exported env vars in the ScanAPI specification in order to
 In the `scanapi.yaml` file, add the `get_token` request:
 
 ```yaml
-endpoints:
+{% raw %}endpoints:
   - name: snippets-api
     path: http://demo.scanapi.dev/api/v1/
     headers:
@@ -81,15 +82,15 @@ endpoints:
         path: /health/
         tests:
           - name: status_code_is_200
-            assert: {% raw %} ${{ response.status_code == 200 }} {% endraw %}
+            assert: ${{ response.status_code == 200 }}
           - name: body_equals_ok
-            assert: {% raw %} ${{ response.json() == "OK!" }} {% endraw %}
+            assert: ${{ response.json() == "OK!" }}
       - name: get_token # this is new
         path: /rest-auth/login/ # this is new
         method: post # this is new
         body: # this is new
           username: ${USER} # this is new
-          password: ${PASSWORD} # this is new
+          password: ${PASSWORD}{% endraw %} # this is new
 ```
 
 Using the [env var notation][docs-env-vars], ScanAPI will be able to access the exported values of

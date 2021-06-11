@@ -103,5 +103,5 @@ The same happens with the `path`. Declaring `/snippets` in the parent makes that
 have this path concatenated to its URL.
 
 If you run ScanAPI again and reload the report, the results should be similar as before. Awesome,
-we have already reached a better result. Still, we can keep improving it. Let's see how can we
+we have already reached a better result. Still, we can keep improving on it. Let's see how we can
 refactor the code using the ScanAPI default values.
