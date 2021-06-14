@@ -47,12 +47,12 @@ The folder structure should look like this now:
 
 ```
 - scanapi (root directory)
-  - .env
-  - csv_template.jinja
-  - scanapi-report.html
-  - scanapi.conf
-  - scanapi.yaml
-  - snippets.yaml
+|── .env
+|── csv_template.jinja
+|── scanapi-report.html
+|── scanapi.conf
+|── scanapi.yaml
+|___  snippets.yaml
 ```
 
 Let's run ScanAPI using the new csv template and sava the results in the `scanapi-report.csv` file:
@@ -75,13 +75,13 @@ This should be the final folder structure:
 
 ```
 - scanapi (root directory)
-  - .env
-  - csv_template.jinja
-  - scanapi-report.csv
-  - scanapi-report.html
-  - scanapi.conf
-  - scanapi.yaml
-  - snippets.yaml
+|── .env
+|── csv_template.jinja
+|── scanapi-report.csv
+|── scanapi-report.html
+|── scanapi.conf
+|── scanapi.yaml
+|___  snippets.yaml
 ```
 
 Congratulations, you have finished documenting and testing the Snippets API using ScanAPI! 🎉

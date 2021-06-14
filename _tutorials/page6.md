@@ -26,10 +26,10 @@ The folder structure should look like this now:
 
 ```
 - scanapi (root directory)
-  - .env
-  - scanapi-report.html
-  - scanapi.conf
-  - scanapi.yaml
+|── .env
+|── scanapi-report.html
+|── scanapi.conf
+|___  scanapi.yaml
 ```
 
 Let's run ScanAPI again and reload the report:
@@ -55,6 +55,6 @@ $ scanapi run
 </p>
 
 Note that all sensitive fields are properly hidden now. Great, so let's make some authenticated
-requests using the key we received in the `/login` response.
+requests using the **Authentication Token** you received in the `/login` response.
 
 [docs-hide-sensitive-info]: /docs_v1/configuration/hiding_sensitive_information.html
