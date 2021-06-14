@@ -1,8 +1,6 @@
 ---
 layout: tutorial
 title: Add to Project
-name: Add to Project
-previous_page_title: Custom Report
 ---
 
 # Add to Project
@@ -144,7 +142,7 @@ It is time to run your action, it should work now! 🎉
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page13/github-action-overview.png"
+    src="/assets/images/tutorial/step13/github-action-overview.png"
     width="900"
     alt="GitHub Action Overview"
   >
@@ -154,7 +152,7 @@ Note that the `scanapi` job only starts after the `deploy-on-staging` ends:
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page13/github-action-pipeline.png"
+    src="/assets/images/tutorial/step13/github-action-pipeline.png"
     width="900"
     alt="GitHub Action Pipeline"
   >
@@ -164,7 +162,7 @@ Inside the `Artifacts` section, click in the `ScanAPI Report` to access the resu
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page13/github-action-artifacts.png"
+    src="/assets/images/tutorial/step13/github-action-artifacts.png"
     width="900"
     alt="GitHub Action Artifacts"
   >
@@ -244,7 +242,7 @@ Save, commit and push your changes to your `main` branch.
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page13/circleci-setup.png"
+    src="/assets/images/tutorial/step13/circleci-setup.png"
     width="400"
     alt="CircleCi Setup"
   >
@@ -310,7 +308,7 @@ Note that the `scanapi` job only starts after the `deploy-on-staging` ends:
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page13/circleci-workflow-1.png"
+    src="/assets/images/tutorial/step13/circleci-workflow-1.png"
     width="900"
     alt="CircleCI Pipeline"
   >
@@ -318,7 +316,7 @@ Note that the `scanapi` job only starts after the `deploy-on-staging` ends:
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page13/circleci-workflow-2.png"
+    src="/assets/images/tutorial/step13/circleci-workflow-2.png"
     width="900"
     alt="CircleCI ScanAPI job"
   >
@@ -328,7 +326,7 @@ Inside the `Artifacts` tab, click in the `scanapi/report.html` to access the res
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page13/circleci-workflow-3.png"
+    src="/assets/images/tutorial/step13/circleci-workflow-3.png"
     width="900"
     alt="CircleCI Artifacts"
   >

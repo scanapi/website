@@ -11,7 +11,7 @@ title: Tutorial
                 class="current"
             {% endif %}
             href="{{ tutorial_page.url | relative_url }}">
-            {{ tutorial_page.name }}
+            {{ tutorial_page.title }}
         </a>
     {% endfor %}
     </div>
@@ -19,30 +19,13 @@ title: Tutorial
     <div class="main">
         {{ content }}
         <div class=pagination>
-            {% assign page_number = page.path | remove_first: "_tutorials/page" | remove_first: ".md" |to_integer %}
-
-            {% assign previous_page_number = page_number | minus: 1 %}
-            {% assign previous_page_name = 'page' | append: previous_page_number %}
-            {% assign previous_page_full_path = 'tutorials/' | append: previous_page_name | append: '.html' %}
-
-            {% assign next_page_number = page_number | plus: 1 %}
-            {% assign next_page_name = 'page' | append: next_page_number %}
-            {% assign next_page_full_path = 'tutorials/' | append: next_page_name | append: '.html' %}
-
-            {% if page_number > 1 %}
-                <a href={{ previous_page_full_path | relative_url }}>
-                    <img class="previous" src="{{"/assets/images/arrow.svg" | relative_url}}"/>
-                    {{ page.previous_page_title }}
-                </a>
+            {% if page.previous.url %}
+                <a class="prev" href="{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
             {% else %}
                 <a></a>
             {% endif %}
-
-            {% if page_number < site.tutorials.size %}
-                <a href={{ next_page_full_path | relative_url }}>
-                    {{ page.next_page_title }}
-                    <img class="next" src="{{"/assets/images/arrow.svg" | relative_url}}"/>
-                </a>
+            {% if page.next.url %}
+                <a class="next" href="{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
             {% endif %}
         </div>
     </div>

@@ -1,9 +1,6 @@
 ---
 layout: tutorial
 title: Hide Info
-name: Hide Info
-previous_page_title: Env Vars
-next_page_title: Chaining Requests
 ---
 
 # Hiding Sensitive Information
@@ -40,7 +37,7 @@ $ scanapi run
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page6/report-1.png"
+    src="/assets/images/tutorial/step06/report-1.png"
     width="900"
     alt="Hidden Credentials"
   >
@@ -48,7 +45,7 @@ $ scanapi run
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page6/report-2.png"
+    src="/assets/images/tutorial/step06/report-2.png"
     width="900"
     alt="Hidden key"
   >

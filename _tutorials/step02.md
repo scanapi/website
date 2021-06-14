@@ -1,9 +1,6 @@
 ---
 layout: tutorial
 title: API Sign Up
-name: API Sign Up
-previous_page_title: Setup
-next_page_title: Run
 ---
 
 # Snippets API Sign Up
@@ -39,7 +36,7 @@ and this is its highlighted version: [demo.scanapi.dev/api/v1/snippets/2/highlig
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page2/calculator-highlight.png"
+    src="/assets/images/tutorial/step02/calculator-highlight.png"
     width="500"
     alt="An overview screenshot of the report."
   >
@@ -76,7 +73,7 @@ but don't worry, it will be stored in the database properly.
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page2/registration.png"
+    src="/assets/images/tutorial/step02/registration.png"
     width="900"
     alt="User registration form."
   >
@@ -86,7 +83,7 @@ Hit the button `POST`. You should see a screen similar to this:
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page2/registration-complete.png"
+    src="/assets/images/tutorial/step02/registration-complete.png"
     width="900"
     alt="User registration complete, returning the user key."
   >

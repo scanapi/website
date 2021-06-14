@@ -1,9 +1,6 @@
 ---
 layout: tutorial
 title: Default Values
-name: Default Values
-previous_page_title: Nested Endpoints
-next_page_title: Include
 ---
 
 # Default Values

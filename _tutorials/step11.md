@@ -1,9 +1,6 @@
 ---
 layout: tutorial
 title: Project Name
-name: Project Name
-previous_page_title: Include
-next_page_title: Custom Report
 ---
 
 # Project Name
@@ -38,7 +35,7 @@ $ scanapi run
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page11/report-1.png"
+    src="/assets/images/tutorial/step11/report-1.png"
     width="900"
     alt="Report overview - project name"
   >

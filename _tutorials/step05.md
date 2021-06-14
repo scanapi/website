@@ -1,9 +1,6 @@
 ---
 layout: tutorial
 title: Env Vars
-name: Env Vars
-previous_page_title: Tests
-next_page_title: Hide Info
 ---
 
 # Environment Variables (env vars)
@@ -109,7 +106,7 @@ successfully.
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page5/report-1.png"
+    src="/assets/images/tutorial/step05/report-1.png"
     width="900"
     alt="Report overview"
   >
@@ -119,7 +116,7 @@ But, if we look closer, the report is showing your secret information:
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page5/report-2.png"
+    src="/assets/images/tutorial/step05/report-2.png"
     width="900"
     alt="Exposed Credentials"
   >
@@ -129,7 +126,7 @@ Besides, the response content also contains sensitive information that is being 
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page5/report-3.png"
+    src="/assets/images/tutorial/step05/report-3.png"
     width="900"
     alt="Exposed Key"
   >

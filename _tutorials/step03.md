@@ -1,9 +1,6 @@
 ---
 layout: tutorial
 title: Run
-name: Run
-previous_page_title: API Sign Up
-next_page_title: Tests
 ---
 
 # Run ScanAPI
@@ -59,7 +56,7 @@ It is time to check the results! Open the generated file `scanapi-report.html` i
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page3/report-1.png"
+    src="/assets/images/tutorial/step03/report-1.png"
     width="900"
     alt="An overview screenshot of the report."
   >
@@ -69,7 +66,7 @@ Expand the request component to see more details. First, the details of the requ
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page3/report-2.png"
+    src="/assets/images/tutorial/step03/report-2.png"
     width="900"
     alt="Request details"
   >
@@ -92,7 +89,7 @@ And then, the response details:
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page3/report-3.png"
+    src="/assets/images/tutorial/step03/report-3.png"
     width="900"
     alt="Response details"
   >
