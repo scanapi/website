@@ -1,9 +1,6 @@
 ---
 layout: tutorial
 title: Custom Report
-name: Custom Report
-previous_page_title: Project Name
-next_page_title: Add to Project
 ---
 
 # Custom Report
@@ -65,7 +62,7 @@ The `.csv` result:
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page12/report-csv.png"
+    src="/assets/images/tutorial/step12/report-csv.png"
     width="900"
     alt="CSV Report"
   >

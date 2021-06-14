@@ -1,9 +1,6 @@
 ---
 layout: tutorial
 title: Chaining Requests
-name: Chaining Requests
-previous_page_title: Hide Info
-next_page_title: Nested Endpoints
 ---
 
 # Chaining Requests
@@ -70,7 +67,7 @@ $ scanapi run
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page7/report-1.png"
+    src="/assets/images/tutorial/step07/report-1.png"
     width="900"
     alt="Report overview - failing"
   >
@@ -78,7 +75,7 @@ $ scanapi run
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page7/report-2.png"
+    src="/assets/images/tutorial/step07/report-2.png"
     width="900"
     alt="Failing test"
   >
@@ -147,7 +144,7 @@ Run ScanAPI again and reload the report
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page7/report-3.png"
+    src="/assets/images/tutorial/step07/report-3.png"
     width="900"
     alt="Report overview - success"
   >
@@ -155,7 +152,7 @@ Run ScanAPI again and reload the report
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page7/report-4.png"
+    src="/assets/images/tutorial/step07/report-4.png"
     width="900"
     alt="Response details"
   >
@@ -165,7 +162,7 @@ It works now! But, it is still missing one detail. Your key is being exposed in 
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page7/report-5.png"
+    src="/assets/images/tutorial/step07/report-5.png"
     width="900"
     alt="Request details - exposed key"
   >
@@ -190,7 +187,7 @@ Run ScanAPI and reload the report again
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page7/report-6.png"
+    src="/assets/images/tutorial/step07/report-6.png"
     width="900"
     alt="Request details - hidden key"
   >
@@ -268,7 +265,7 @@ Run ScanAPI again and reload the report
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page7/report-7.png"
+    src="/assets/images/tutorial/step07/report-7.png"
     width="900"
     alt="Report overview - snippet details"
   >
@@ -365,7 +362,7 @@ Run ScanAPI again and reload the report
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page7/report-8.png"
+    src="/assets/images/tutorial/step07/report-8.png"
     width="900"
     alt="Report overview - snippet details"
   >

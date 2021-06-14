@@ -1,9 +1,6 @@
 ---
 layout: tutorial
 title: Tests
-name: Tests
-previous_page_title: Run
-next_page_title: Env Vars
 ---
 
 # Writing Tests
@@ -38,7 +35,7 @@ Reload your browser and check the `TESTS` now:
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page4/report-tests.png"
+    src="/assets/images/tutorial/step04/report-tests.png"
     width="900"
     alt="Test details"
   >
@@ -54,7 +51,7 @@ corresponding exit code.
 
 <p align="center">
   <img
-    src="/assets/images/tutorial/page4/report-tests-summary.png"
+    src="/assets/images/tutorial/step04/report-tests-summary.png"
     width="900"
     alt="Tests summary"
   >

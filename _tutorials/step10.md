@@ -1,9 +1,6 @@
 ---
 layout: tutorial
 title: Include
-name: Include
-previous_page_title: Default Values
-next_page_title: Project Name
 ---
 
 # Include

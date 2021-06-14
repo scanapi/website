@@ -1,20 +1,6 @@
 collections:
   tutorials:
     output: true
-    order:
-      - page1.md
-      - page2.md
-      - page3.md
-      - page4.md
-      - page5.md
-      - page6.md
-      - page7.md
-      - page8.md
-      - page9.md
-      - page10.md
-      - page11.md
-      - page12.md
-      - page13.md
   docs_v1:
     output: true
 
