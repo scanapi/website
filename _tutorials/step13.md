@@ -102,7 +102,7 @@ Error to make request `http://demo.scanapi.dev/api/v1/rest-auth/login/`.
 This happens because you didn't set the environment variables `USER` and `PASSWORD` in your
 GitHub repository. Follow these steps to create the missing env vars:
 
-> [https://docs.github.com/en/actions/reference/encrypted-secrets](https://docs.github.com/en/actions/reference/encrypted-secrets)
+> [GitHub - Encrypted Secrets][gh-encrypted-secrets]
 
 Now, let's change `scanapi-action.yaml` to access the secrets you've just created:
 
@@ -258,7 +258,7 @@ Error to make request `http://demo.scanapi.dev/api/v1/rest-auth/login/`.
 This happens because you didn't set the environment variables `USER` and `PASSWORD` in your
 CircleCI Project. Follow these steps to create the missing env vars:
 
-> [https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project)
+> [CircleCI - Setting an Environment Variable in a project][circle-ci-env-var]
 
 Now, let's change `scanapi-action.yaml` to access the env variables you've just created:
 
@@ -346,11 +346,13 @@ We thank you for using and supporting ScanAPI ❤️
 
 Read more: [Official ScanAPI Documentation][scanapi-docs]
 
+[circle-ci-env-var]: http://www.circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project
 [circle-ci-official-docs]: https://circleci.com/docs/
 [circle-ci-setup]: https://circleci.com/docs/2.0/getting-started/#setting-up-circleci
 [circle-ci]: http://circleci.com/
 [gh-actions-official-docs]: https://docs.github.com/en/actions
 [gh-actions]: https://github.com/features/actions
+[gh-encrypted-secrets]: https://docs.github.com/en/actions/reference/encrypted-secrets
 [scanapi-docker-hub]: https://hub.docker.com/r/camilamaia/scanapi
 [scanapi-docs]: /docs.html
 [scanapi-gh-action]: https://github.com/marketplace/actions/scanapi
