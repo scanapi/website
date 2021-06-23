@@ -60,5 +60,5 @@ corresponding exit code.
 Congrats, you have documented and tested your first request! Now, it is time to start testing
 endpoints that need authentication.
 
-[python-code]: http://127.0.0.1:4000/docs_v1/specification/python_code.html
+[python-code]: https://scanapi.dev/docs_v1/specification/python_code.html
 [requests-response]: https://docs.python-requests.org/en/latest/api/#requests.Response
