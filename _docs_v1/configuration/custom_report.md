@@ -295,7 +295,7 @@ Also, if you want to check, this is the [default template code][default_template
 you!
 
 [config_file]: https://scanapi.dev/docs_v1/configuration/config_file.html
-[default_template]: https://github.com/scanapi/scanapi/blob/master/scanapi/templates/report.html
+[default_template]: https://github.com/scanapi/scanapi/blob/main/scanapi/templates/report.html
 [generator]: https://wiki.python.org/moin/Generators
 [jinja]: https://jinja.palletsprojects.com/en/2.11.x/
 [requests_response]: https://docs.python-requests.org/en/latest/api/#requests.Response

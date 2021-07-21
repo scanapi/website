@@ -33,4 +33,4 @@ body:
 What I can use inside the {% raw %} `${{ }}` {% endraw %} syntax?
 Any python code that **can run inside an `eval` python command**.
 A short list of modules will be already available for you. They are all the imports of
-[this file](https://github.com/scanapi/scanapi/blob/master/scanapi/evaluators/code_evaluator.py#L1).
+[this file](https://github.com/scanapi/scanapi/blob/main/scanapi/evaluators/code_evaluator.py#L1).
