@@ -31,9 +31,9 @@ $ scanapi --version
 scanapi, version 2.3.0
 ```
 
-**macOS tip**: In case you are on a macOS machine and your `python --version` is 2.x, you will need to perform some extra steps [described here](https://dev.to/malwarebo/how-to-set-python3-as-a-default-python-version-on-mac-4jjf).
-
 The output should return a version equal to 2.3.0 or higher.
+
+**macOS tip**: In case you are on a macOS machine and your `python --version` is 2.x, you will need to perform some extra steps [described here](https://dev.to/malwarebo/how-to-set-python3-as-a-default-python-version-on-mac-4jjf).
 
 [pip-installation]: https://pip.pypa.io/en/stable/installing/
 [python]: https://www.python.org/
