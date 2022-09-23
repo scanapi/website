@@ -44,12 +44,11 @@ $ scanapi run
 From the output of the command, you can see that ScanAPI:
 
 ```shell
-Loading file scanapi.yaml # loads the specification file you created
-Writing documentation # starts writing the report for your API
-Making request GET http://demo.scanapi.dev/api/v1/health/ # makes a GET request to the /health path
+INFO     Loading file scanapi.yaml # loads the specification file you created
 
+- Making request GET http://demo.scanapi.dev/api/v1/health/  # makes a GET request to the /health path
 The documentation was generated successfully.
-It is available at <your_root_path>/scanapi-report.html # generates the API documentation
+It is available at -> <your_root_path>/scanapi-report.html # generates the API documentation
 ```
 
 It is time to check the results! Open the generated file `scanapi-report.html` in your browser.
