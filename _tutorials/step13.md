@@ -260,7 +260,7 @@ CircleCI Project. Follow these steps to create the missing env vars:
 
 > [CircleCI - Setting an Environment Variable in a project][circle-ci-env-var]
 
-Now, let's change `scanapi-action.yaml` to access the env variables you've just created:
+Now, let's change `config.yml` to access the env variables you've just created:
 
 ```yaml
 {% raw %}version: 2.1

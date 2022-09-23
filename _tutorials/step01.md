@@ -12,7 +12,7 @@ ScanAPI.
 
 ScanAPI is a Python library. For installing ScanAPI, you will need:
 
-- \- [python][python] version 3.6 or higher
+- \- [python][python] version 3.7 or higher
 - \- [pip][pip-installation], the standard package manager for Python
 
 If you are new to the Python world, no worries, this
@@ -28,10 +28,10 @@ Check that ScanAPI is installed properly:
 
 ```shell
 $ scanapi --version
-scanapi, version 2.3.0
+scanapi, version 2.8.0
 ```
 
-The output should return a version equal to 2.3.0 or higher.
+The output should return a version equal to 2.8.0 or higher.
 
 [pip-installation]: https://pip.pypa.io/en/stable/installing/
 [python]: https://www.python.org/
