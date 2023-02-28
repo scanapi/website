@@ -29,15 +29,14 @@ For example:
 ```yaml
 endpoints:
   - name: scanapi-demo # The API's name of your API
-    path: http://demo.scanapi.dev/api/ # The API's base url
+    path: http://demo.scanapi.dev/api/v1 # The API's base url
     requests:
-      - name: list_all_devs # The name of the first request
-        path: devs/ # The path of the first request
+      - name: list_all_users # The name of the first request
+        path: users/ # The path of the first request
         method: get # The HTTP method of the first request
         tests:
           - name: status_code_is_200 # The name of the first test for this request
-            assert: {% raw %} ${{ response.status_code == 200 }} {% endraw %} # The assertion
-
+            assert: ${{ response.status_code == 200 }} # The assertion
 ```
 
 And run the scanapi command
@@ -50,19 +49,14 @@ Then, the lib will hit the specified endpoints and generate a `scanapi-report.ht
 
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/scanapi/scanapi/master/images/report-print-closed.png"
+    src="https://raw.githubusercontent.com/scanapi/scanapi/main/images/report-print-closed.png"
     width="700"
     alt="An overview screenshot of the report."
   >
   <img
-    src="https://raw.githubusercontent.com/scanapi/scanapi/master/images/report-print-request.png"
+    src="https://raw.githubusercontent.com/scanapi/scanapi/main/images/report-print-opened.png"
     width="700"
     alt="A screenshot of the report showing the request details."
-  >
-  <img
-    src="https://raw.githubusercontent.com/scanapi/scanapi/master/images/report-print-response.png"
-    width="700"
-    alt="A screenshot of the report showing the response and test details"
   >
 </p>
 
