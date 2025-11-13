@@ -55,7 +55,9 @@
     }
 
     &__button {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         padding: 12px 30px;
         // Fallback: cor sólida antes do gradiente
         background-color: $primary-color;
@@ -258,6 +260,9 @@
     }
 
     &__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         padding: 14px 32px;
         // Fallback: cor sólida antes do gradiente
         background-color: $primary-color;

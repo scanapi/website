@@ -24,6 +24,61 @@ body {
     background-color: $light-color;
 }
 
+a, button {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+        outline: none;
+        box-shadow: none !important;
+    }
+
+    &:active {
+        outline: none;
+        box-shadow: none !important;
+    }
+
+    &:focus-visible {
+        /* Removemos o contorno também no :focus-visible para evitar a borda em navegação por mouse
+           Caso precise de foco visível acessível, aplicar a classe utilitária .u-focus-ring no elemento */
+        outline: none;
+        box-shadow: none !important;
+    }
+}
+
+/* Remover qualquer realce de foco na barra de navegação explicitamente */
+.nav-bar a,
+.site-nav__link,
+.navbar .nav-link,
+.navbar .nav-link:focus,
+.navbar .nav-link:active,
+.navbar .nav-link:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Remover bordas/contornos nas barras laterais (docs e tutorial) */
+.docs-page__sidenav a,
+.docs-page__sidenav a:focus,
+.docs-page__sidenav a:active,
+.docs-page__sidenav a:focus-visible,
+.tutorial-page__sidenav a,
+.tutorial-page__sidenav a:focus,
+.tutorial-page__sidenav a:active,
+.tutorial-page__sidenav a:focus-visible,
+.sidenav a,
+.sidenav a:focus,
+.sidenav a:active,
+.sidenav a:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove contorno em imagens dentro de links (antigos user agents) */
+a img { border: 0; outline: none; }
+
 .content {
     min-height: 100vh;
 }
