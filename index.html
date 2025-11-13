@@ -46,45 +46,71 @@ title: ScanAPI - Automated Integration Testing and Live Documentation for your A
             <p class="features__description">
                 Keep your API tests and docs as code. Store specs and configs in your repository, review changes via pull requests, and run everything reproducibly in CI/CD.
             </p>
-            <img src="{{ "/assets/images/github-logo.svg" | relative_url }}" alt="GitHub" class="features__figure">
         </div>
     </div>
 </section>
 
 <section class="section section--reports home-section home-section--reports">
     <div class="section__content">
-        <h2 class="section__title">Reports</h2>
-        <p class="section__text">The Reports can be generated on demand, via command line, or added to your CI pipeline and generated as an artifact.</p>
-        <p class="section__text">Reports can be customized to fit your style. You only need to provide your own Jinja Template.</p>
-        <p class="section__text">Hide sensitive information in the reports. You do not want to show your secrets, right? </p>
-        <p class="section__text">For each request, you have access to the exactly cURL to reproduce it again. </p>
+        <h2 class="section__title">Beautiful Reports</h2>
+        <p class="section__text">Generate comprehensive, interactive HTML reports automatically with every test run.</p>
+
+        <div class="section__features-list">
+            <div class="section__feature-item">
+                <span class="section__feature-icon">📊</span>
+                <span class="section__feature-text">Visual test results with detailed request/response data</span>
+            </div>
+            <div class="section__feature-item">
+                <span class="section__feature-icon">🎨</span>
+                <span class="section__feature-text">Fully customizable with your own Jinja templates</span>
+            </div>
+            <div class="section__feature-item">
+                <span class="section__feature-icon">🔒</span>
+                <span class="section__feature-text">Hide sensitive information automatically</span>
+            </div>
+            <div class="section__feature-item">
+                <span class="section__feature-icon">📋</span>
+                <span class="section__feature-text">Copy exact cURL commands to reproduce requests</span>
+            </div>
+        </div>
+
         <a href="{{ "/docs_v1/configuration/custom_report.html" | relative_url }}" class="section__button">Learn about reports</a>
     </div>
-    <img src="{{"/assets/images/scanapi-report.png" | relative_url }}" class="section__image">
+    <div class="section__image-wrapper">
+        <img src="{{"/assets/images/scanapi-report.png" | relative_url }}" class="section__image section__image--clickable" alt="ScanAPI Report Example" onclick="openImageModal(this.src)">
+    </div>
 </section>
 
 <section class="section section--tests home-section home-section--tests">
-    <img src="{{"/assets/images/tests.png" | relative_url }}" class="section__image">
-    <div class="section__content">
-        <h2 class="section__title">Integration tests</h2>
-        <h3 class="section__subtitle">How?</h3>
-        <p class="section__text">
-            Define endpoints to be hit, the expected behaviors for each response, and, as a result, receives a full real-time diagnostic of your API.
-        </p>
-        <h3 class="section__subtitle">Really?</h3>
-        <p class="section__text">
-            A flexible and extensible API specification syntax.
-            The spec supports environment variables, custom variables, chain requests and Python code.
-        </p>
-        <h3 class="section__subtitle">Why?</h3>
-        <p class="section__text">
-            Be the first to be notified if any API endpoint is not working as expected.
-        </p>
-        <a href="{{ "/tutorials/step01.html" | relative_url }}" class="section__button">See tutorial</a>
+    <div class="section__image-wrapper">
+        <img src="{{"/assets/images/tests.png" | relative_url }}" class="section__image section__image--clickable" alt="ScanAPI Integration Tests" onclick="openImageModal(this.src)">
     </div>
-</section>
+    <div class="section__content">
+        <h2 class="section__title">Powerful Integration Tests</h2>
+        <p class="section__text">Test your API endpoints with confidence using a simple, declarative specification syntax.</p>
 
-<section class="section section--contributors home-section home-section--contributors">
+        <div class="section__features-list">
+            <div class="section__feature-item">
+                <span class="section__feature-icon">🎯</span>
+                <span class="section__feature-text">Define endpoints and expected behaviors in YAML or JSON</span>
+            </div>
+            <div class="section__feature-item">
+                <span class="section__feature-icon">🔗</span>
+                <span class="section__feature-text">Chain requests and use responses to build the next</span>
+            </div>
+            <div class="section__feature-item">
+                <span class="section__feature-icon">🐍</span>
+                <span class="section__feature-text">Support for environment variables, custom vars, and Python code</span>
+            </div>
+            <div class="section__feature-item">
+                <span class="section__feature-icon">⚡</span>
+                <span class="section__feature-text">Get instant feedback and catch issues before production</span>
+            </div>
+        </div>
+
+        <a href="{{ "/tutorials/step01.html" | relative_url }}" class="section__button">Start testing now</a>
+    </div>
+</section><section class="section section--contributors home-section home-section--contributors">
     <div class="section__content">
         <h2 class="section__title">Contributors</h2>
         <p class="section__text">ScanAPI is an Open Source project maintained by a great community of contributors.</p>
@@ -116,3 +142,34 @@ title: ScanAPI - Automated Integration Testing and Live Documentation for your A
         <a href="https://opencollective.com/scanapi" class="section__button">Become a backer</a>
     </div>
 </section>
+
+<!-- Image Modal -->
+<div id="imageModal" class="image-modal" onclick="closeImageModal()">
+    <span class="image-modal__close">&times;</span>
+    <div class="image-modal__wrapper">
+        <img class="image-modal__content" id="modalImage">
+    </div>
+</div>
+
+<script>
+function openImageModal(src) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    modal.style.display = 'flex';
+    modalImg.src = src;
+    document.body.style.overflow = 'hidden';
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal with ESC key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeImageModal();
+    }
+});
+</script>
