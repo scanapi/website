@@ -8,9 +8,8 @@
 
     &__image {
         max-height: 350px;
-        // Fallback para navegadores sem suporte a filter
-        box-shadow: 5px 5px 5px $shadow-color;
         filter: drop-shadow(5px 5px 5px $shadow-color);
+        border-radius: 10px;
         transition: transform 0.3s ease;
 
         &:hover {
@@ -360,9 +359,6 @@
         height: 150px;
         margin-bottom: 20px;
         transition: transform 0.3s ease;
-        // Fallback: box-shadow antes de filter
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
     }
 
     &__title {
