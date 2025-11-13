@@ -1,5 +1,68 @@
---- 
---- 
-@import "main";
+---
+---
 @import "reset";
+@import "main";
 @import "index";
+
+/* Camada global: expõe variáveis SCSS como custom properties para uso futuro (JS, overrides temáticos) */
+:root {
+	--color-primary: #FF7163;
+	--color-primary-light: #FCE8E6;
+	--color-light: #FFFFFF;
+	--color-gray-base: #232020;
+	--color-gray-darker: #161616;
+	--shadow-color: #AFAFAF;
+	--font-size-normal: 18px;
+	--font-size-large: 26px;
+	--font-size-larger: 40px;
+	--screen-sm: 576px;
+	--screen-md: 768px;
+	--screen-lg: 992px;
+	--screen-xl: 1200px;
+	--screen-xxl: 1400px;
+}
+
+/* Preferências de redução de movimento: desativa animações pesadas */
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Fallback para filtros drop-shadow em navegadores sem suporte */
+@supports not ((filter: drop-shadow(2px 2px 4px rgba(0,0,0,.3)))) {
+	.section__image,
+	.features__icon,
+	.cover__button,
+	.section__button {
+		/* Aproximação visual usando box-shadow */
+		box-shadow: 0 4px 8px rgba(0,0,0,.25);
+	}
+}
+
+/* Fallback simples para gradientes (caso não suportados, mantém cor sólida) */
+.no-gradient {
+	.cover,
+	.section--reports,
+	.section--contributors,
+	.section__button,
+	.cover__button,
+	.features__item::before {
+		background: var(--color-primary) !important;
+	}
+}
+
+/* Utilitário de acessibilidade para focus visível */
+.u-focus-ring:focus,
+a:focus,
+button:focus {
+	outline: 3px solid var(--color-primary);
+	outline-offset: 2px;
+}
+
+/* Pequena correção global para imagens responsivas de tutoriais */
+img[loading="lazy"] { opacity: 0; transition: opacity .3s ease; }
+img[loading="lazy"].is-loaded { opacity: 1; }

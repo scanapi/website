@@ -1,0 +1,247 @@
+//  Bootstrap breakpoints
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1400px;
+
+$base-gray: #232020;
+$light-color: #FFFFFF;
+$darker-color: #161616;
+$primary-color: #FF7163;
+$light-primary-color: #FCE8E6;
+$shadow-color: #AFAFAF;
+$normal-font-size: 18px;
+$large-font-size: 26px;
+$larger-font-size: 40px;
+* {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 18px;
+}
+
+body {
+    margin: 0px;
+    background-color: $light-color;
+}
+
+.content {
+    min-height: 100vh;
+}
+
+.nav-bar {
+    background-color: $base-gray;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    .current {
+        color: $primary-color;
+        opacity: 1;
+    }
+
+    ul {
+        margin: 0;
+        line-height: 24px;
+        margin-right: 88px;
+    }
+
+    li {
+        margin: 0;
+        a:hover {
+            opacity: 1;
+            color: $light-color;
+        }
+    }
+}
+
+.nav-item {
+    font-size: 18px;
+    color: $light-color;
+    flex-grow: 4;
+    text-decoration: none;
+    margin: 0 15px;
+    opacity: 0.8;
+}
+
+.nav-icon {
+    margin: 0 0 0 7px;
+    opacity: 0.8;
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.nav-item:hover {
+    opacity: 1;
+}
+
+.scanapi-logo {
+    height: 55px;
+    margin-left: 88px;
+    position: relative;
+    z-index: 10;
+}
+
+.footer {
+    background-color: $base-gray;
+    color: $light-color;
+    width: 100%;
+    height: fit-content;
+    line-height: 1.5;
+    padding: 20px 100px;
+
+    .footer-icons {
+        margin-bottom: 10px;
+    }
+    a {
+        color: $primary-color;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $primary-color;
+    }
+    .footer-contact {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-contact-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: right;
+        span {
+            margin: 3px 0;
+        }
+    }
+    .footer-copyright {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .footer-copyright-text {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .footer-copyright-text span {
+            margin: 2px;
+        }
+    }
+}
+
+// ===== BEM dual mapping (merged from _layout.scss) =====
+.site-header { background-color: $base-gray; box-shadow: 0 4px 4px rgba(0,0,0,.25); }
+.site-header__nav { position:relative; }
+.site-header__logo { height:55px; }
+.site-nav { list-style:none; padding-left:0; }
+.site-nav__item { display:inline-block; }
+.site-nav__link { text-decoration:none; opacity:.8; color:$light-color; margin:0 15px; font-size:18px; }
+.site-nav__link:hover { opacity:1; color:$light-color; }
+.site-nav__icon { width:30px; height:30px; }
+.site-nav__icon-link { opacity:.8; }
+.site-nav__icon-link:hover { opacity:1; }
+
+.site-footer { background-color:$base-gray; color:$light-color; line-height:1.5; padding:20px 100px; }
+.site-footer__contact { display:flex; justify-content:space-between; }
+.site-footer__contact-text { display:flex; flex-direction:column; justify-content:space-between; text-align:right; }
+.site-footer__logo { height:55px; }
+.site-footer__social { margin-bottom:10px; }
+.site-footer__social-link { margin:0 5px; }
+.site-footer__social-icon { width:30px; height:30px; }
+.site-footer a { color:$primary-color; text-decoration:none; }
+.site-footer a:hover { color:$primary-color; text-decoration:underline; }
+.site-footer__bottom { display:flex; flex-direction:column; align-items:center; }
+.site-footer__copyright { text-align:center; }
+
+.docs-page { width:100%; display:flex; min-height:100vh; }
+.docs-page__sidenav { display:flex; flex-direction:column; width:300px; margin:30px 40px 20px 50px; padding-right:10px; text-align:right; border-right:1px solid #ccc; }
+.docs-page__sidenav a { text-decoration:none; color:$darker-color; padding-bottom:20px; }
+.docs-page__sidenav a:hover { opacity:.6; }
+.docs-page__sidenav .current { color:$primary-color; }
+.docs-page__sidenav h2 { text-transform:uppercase; font-size:18px; }
+.docs-page__main { width:100%; margin:20px 40px 20px 0; }
+
+.tutorial-page { width:100%; display:flex; min-height:100vh; }
+.tutorial-page__sidenav { display:flex; flex-direction:column; width:300px; margin:30px 40px 20px 50px; padding-right:10px; text-align:right; border-right:1px solid #ccc; }
+.tutorial-page__sidenav a { text-decoration:none; color:$darker-color; padding-bottom:20px; font-weight:bold; }
+.tutorial-page__sidenav a:hover { opacity:.6; }
+.tutorial-page__sidenav .current { color:$primary-color; }
+.tutorial-page__main { width:100%; margin:20px 40px 20px 0; }
+.tutorial-page__main .pagination { display:flex; justify-content:space-between; font-size:20px; }
+.tutorial-page__main .pagination a img { width:25px; }
+.tutorial-page__main .pagination a img.previous { transform:rotate(180deg); }
+.tutorial-page__main .pagination a:hover { color:$primary-color; }
+
+.community-page { width:100%; display:flex; min-height:100vh; padding:20px; }
+.community-page__main { width:100%; }
+.community-page__main iframe { width:420px; height:315px; }
+
+.home-page .hero { position:relative; }
+.home-page .feature-list { position:relative; }
+.home-section { position:relative; }
+
+// ===== Responsivo BEM unificado: mobile-first =====
+
+// Tablet grande e abaixo (≤1400px)
+@media (max-width: $screen-xxl) {
+    .scanapi-logo { margin-left: 0; }
+    .nav-bar ul { margin-right: 0; }
+}
+
+// Desktop médio e abaixo (≤1200px)
+@media (max-width: $screen-xl) {
+    .nav-item { margin: 0 10px; }
+    .nav-icon { margin: 0 0 0 7px; }
+}
+
+// Tablet e abaixo (≤992px)
+@media (max-width: $screen-lg) {
+    .nav-bar {
+        text-align: center;
+
+        li { margin: 8px 0; }
+    }
+
+    .nav-item { margin: 0 10px; }
+    .nav-icon { margin: 0 0 0 7px; }
+}
+
+// Mobile e abaixo (≤768px)
+@media (max-width: $screen-md) {
+    // Rodapé BEM
+    .site-footer { padding: 20px 20px; }
+    .site-footer__contact { flex-direction: column; align-items: center; }
+    .site-footer__contact-text { text-align: center; margin-bottom: 20px; }
+
+    // Rodapé legado
+    .footer {
+        padding: 20px 20px;
+
+        .footer-contact-text {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-contact {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+    }
+
+    // Páginas BEM
+    .docs-page { flex-direction: column; padding: 10px; }
+    .docs-page__sidenav { width: auto; margin: 0; padding: 10px; text-align: left; border: 1px solid #ccc; }
+
+    .tutorial-page { flex-direction: column-reverse; padding: 10px; min-height: auto; }
+    .tutorial-page__sidenav { width: auto; margin: 0; padding: 10px; text-align: left; border: 1px solid #ccc; }
+    .tutorial-page__main .pagination { font-size: 16px; }
+    .tutorial-page__main .pagination a img { width: 18px; }
+
+    .community-page__main iframe { width: 100%; }
+}

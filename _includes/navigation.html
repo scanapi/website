@@ -1,37 +1,37 @@
-<header>
-    <nav class="nav-bar navbar navbar-expand-lg navbar-dark">
+<header class="site-header">
+    <nav class="nav-bar site-header__nav navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a href="/">
-                <img class="scanapi-logo" src="{{ "/assets/images/logo-white-on-transparent.png" | relative_url }}"/>
+            <a href="/" class="site-header__logo-link">
+                <img class="scanapi-logo site-header__logo" src="{{ "/assets/images/logo-white-on-transparent.png" | relative_url }}"/>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
-            <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
-                <ul class="navbar-nav mb-2 mb-lg-0">
+
+            <div class="collapse navbar-collapse site-header__collapse justify-content-end" id="navbar-collapse">
+                <ul class="navbar-nav site-nav mb-2 mb-lg-0">
                     {% for item in site.data.navigation %}
-                        <li>
-                            <a href="{{ item.link | relative_url}}"  class="nav-item{% if page.url == item.link %} current{% endif %}">{{ item.name }}</a>
+                        <li class="site-nav__item">
+                            <a href="{{ item.link | relative_url}}"  class="nav-item site-nav__link{% if page.url == item.link %} current{% endif %}">{{ item.name }}</a>
                         </li>
                     {% endfor %}
-                    <li>
-                        <a class="nav-item" href="https://github.com/scanapi/examples", target="_blank">Examples</a>
+                    <li class="site-nav__item">
+                        <a class="nav-item site-nav__link" href="https://github.com/scanapi/examples" target="_blank">Examples</a>
                     </li>
-                    <li>
-                        <a class="nav-item" href="https://github.com/marketplace/actions/scanapi", target="_blank">GitHub Action</a>
+                    <li class="site-nav__item">
+                        <a class="nav-item site-nav__link" href="https://github.com/marketplace/actions/scanapi" target="_blank">GitHub Action</a>
                     </li>
-                    <li>
-                        <a class="nav-item" href="https://marketplace.visualstudio.com/items?itemName=ScanAPI.scanapi", target="_blank">VSCode Plugin</a>
+                    <li class="site-nav__item">
+                        <a class="nav-item site-nav__link" href="https://marketplace.visualstudio.com/items?itemName=ScanAPI.scanapi" target="_blank">VSCode Plugin</a>
                     </li>
-                    <li>
-                        <a class="nav-item nav-icon" href="https://twitter.com/scanapi_"> <img src="{{ "/assets/images/twitter.svg" | relative_url }}"></a>
+                    <li class="site-nav__item">
+                        <a class="nav-item nav-icon site-nav__icon-link" href="https://twitter.com/scanapi_"> <img class="site-nav__icon" src="{{ "/assets/images/twitter.svg" | relative_url }}"></a>
                     </li>
-                    <li>
-                        <a class="nav-item nav-icon" href="https://github.com/scanapi/scanapi"><img src="{{ "/assets/images/github-logo.svg" | relative_url }}"></a>                        
+                    <li class="site-nav__item">
+                        <a class="nav-item nav-icon site-nav__icon-link" href="https://github.com/scanapi/scanapi"><img class="site-nav__icon" src="{{ "/assets/images/github-logo.svg" | relative_url }}"></a>
                     </li>
-                </ul>            
+                </ul>
             </div>
         </div>
     </nav>

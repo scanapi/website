@@ -4,8 +4,8 @@ title: ScanAPI - Documentation
 ---
 
 <link rel="stylesheet" href="{{"/assets/css/docs.css" | relative_url}}"">
-<div class="docs">
-    <div class="sidenav">
+<div class="docs docs-page">
+    <div class="sidenav docs-page__sidenav">
     {% assign docs_pages = site.pages | where: "page_name","Quick Start" %}
     {% assign docs_pages = docs_pages | concat: site.docs_v1 %}
     {% assign sections = site.data.doc_sections %}
@@ -27,7 +27,7 @@ title: ScanAPI - Documentation
     </div>
 
     <!-- Page content -->
-    <div class="main">
+    <div class="main docs-page__main">
         {{ content }}
     </div>
 </div>

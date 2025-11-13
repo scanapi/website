@@ -3,8 +3,8 @@ layout: default
 title: Tutorial
 ---
 <link rel="stylesheet" href="{{"/assets/css/tutorial.css" | relative_url}}"">
-<div class="tutorial">
-    <div class="sidenav">
+<div class="tutorial tutorial-page">
+    <div class="sidenav tutorial-page__sidenav">
     {% for tutorial_page in site.tutorials %}
         <a
             {% if page.url == tutorial_page.url %}
@@ -16,7 +16,7 @@ title: Tutorial
     {% endfor %}
     </div>
     <!-- Page content -->
-    <div class="main">
+    <div class="main tutorial-page__main">
         {{ content }}
         <div class=pagination>
             {% if page.previous.url %}

@@ -2,69 +2,107 @@
 layout: default
 title: ScanAPI - Automated Integration Testing and Live Documentation for your API
 ---
-<div class="cover">
-    <div class="cover-content">
-        <h1>ScanAPI</h1>
-        <h2>Automated Integration Testing and Live Documentation for your API</h2>
-        <div class="cover-buttons">
-            <a href="{{ "/docs.html" | relative_url }}">Docs</a>
-            <a href="{{ "/tutorials/step01.html" | relative_url }}">Get started</a>
+<div class="cover hero">
+    <div class="cover__content">
+        <h1 class="cover__title">ScanAPI</h1>
+        <h2 class="cover__subtitle">Automated Integration Testing and Live Documentation for your API</h2>
+        <div class="cover__buttons">
+            <a href="{{ "/docs.html" | relative_url }}" class="cover__button">Docs</a>
+            <a href="{{ "/tutorials/step01.html" | relative_url }}" class="cover__button">Get started</a>
         </div>
     </div>
 </div>
 
-<section class="main-infos">
-    <div class="why-scanapi">
-        <div>
-            <img src="{{ "/assets/images/confirm.svg" | relative_url }}">
-            <h3>API contracts tested</h3>
-            Guarantee the quality of the data that is being consumed or used.
-            Ensure that communication between services is occurring as expected.
-            Ensure the system does, in fact, what it should do.
+<section class="features feature-list">
+    <div class="features__grid">
+        <div class="features__item">
+            <img src="{{ "/assets/images/confirm.svg" | relative_url }}" class="features__icon">
+            <h3 class="features__title">API contracts tested</h3>
+            <p class="features__description">
+                Guarantee the quality of the data that is being consumed or used.
+                Ensure that communication between services is occurring as expected.
+                Ensure the system does, in fact, what it should do.
+            </p>
         </div>
-        <div>
-            <img src="{{ "/assets/images/dependency.svg" | relative_url }}">
-            <h3>Nested requests</h3>
-            Use the response of the previous request to build the next.
-            Making it easy to debug complex scenarios of chained requests.
+        <div class="features__item">
+            <img src="{{ "/assets/images/dependency.svg" | relative_url }}" class="features__icon">
+            <h3 class="features__title">Nested requests</h3>
+            <p class="features__description">
+                Use the response of the previous request to build the next.
+                Making it easy to debug complex scenarios of chained requests.
+            </p>
         </div>
-        <div>
-            <img src="{{ "/assets/images/api.svg" | relative_url }}">
-            <h3>Live Documentation</h3>
-            ScanAPI will keep your API documentation always updated.
-            No more misinformation or outdated documentation.
+        <div class="features__item">
+            <img src="{{ "/assets/images/api.svg" | relative_url }}" class="features__icon">
+            <h3 class="features__title">Live Documentation</h3>
+            <p class="features__description">
+                ScanAPI will keep your API documentation always updated.
+                No more misinformation or outdated documentation.
+            </p>
         </div>
     </div>
 </section>
 
-<section class="section section-reports">
-    <div>
-        <h2>Reports</h2>
-        <p>The Reports can be generated on demand, via command line, or added to your CI pipeline and generated as an artifact.</p>
-        <p>Reports can be customized to fit your style. You only need to provide your own Jinja Template.</p>
-        <p>Hide sensitive information in the reports. You do not want to show your secrets, right? </p>
-        <p>For each request, you have access to the exactly cURL to reproduce it again. </p>
+<section class="section section--reports home-section home-section--reports">
+    <div class="section__content">
+        <h2 class="section__title">Reports</h2>
+        <p class="section__text">The Reports can be generated on demand, via command line, or added to your CI pipeline and generated as an artifact.</p>
+        <p class="section__text">Reports can be customized to fit your style. You only need to provide your own Jinja Template.</p>
+        <p class="section__text">Hide sensitive information in the reports. You do not want to show your secrets, right? </p>
+        <p class="section__text">For each request, you have access to the exactly cURL to reproduce it again. </p>
     </div>
-    <img src="{{"/assets/images/scanapi-report.png" | relative_url }}">
+    <img src="{{"/assets/images/scanapi-report.png" | relative_url }}" class="section__image">
 </section>
 
-<section class="section section-integration-tests">
-    <img src="{{"/assets/images/tests.png" | relative_url }}">
-    <div>
-        <h2>Integration tests</h2>
-        <h3>How?</h3>
-        <p>
+<section class="section section--tests home-section home-section--tests">
+    <img src="{{"/assets/images/tests.png" | relative_url }}" class="section__image">
+    <div class="section__content">
+        <h2 class="section__title">Integration tests</h2>
+        <h3 class="section__subtitle">How?</h3>
+        <p class="section__text">
             Define endpoints to be hit, the expected behaviors for each response, and, as a result, receives a full real-time diagnostic of your API.
         </p>
-        <h3>Really?</h3>
-        <p>
+        <h3 class="section__subtitle">Really?</h3>
+        <p class="section__text">
             A flexible and extensible API specification syntax.
             The spec supports environment variables, custom variables, chain requests and Python code.
         </p>
-        <h3>Why?</h3>
-        <p>
+        <h3 class="section__subtitle">Why?</h3>
+        <p class="section__text">
             Be the first to be notified if any API endpoint is not working as expected.
         </p>
     </div>
+</section>
 
+<section class="section section--contributors home-section home-section--contributors">
+    <div class="section__content">
+        <h2 class="section__title">Contributors</h2>
+        <p class="section__text">ScanAPI is an Open Source project maintained by a great community of contributors.</p>
+        <p class="section__text">We welcome contributions of all kinds, from bug reports and documentation improvements to new features and code enhancements.</p>
+        <p class="section__text">Join us on GitHub and help make ScanAPI even better!</p>
+        <a href="https://github.com/scanapi/scanapi" class="section__button">View on GitHub</a>
+    </div>
+    <div class="section__gallery">
+        <a href="https://github.com/scanapi/scanapi/graphs/contributors" class="section__gallery-link">
+            <img src="https://contrib.rocks/image?repo=scanapi/scanapi" alt="contributors" class="section__gallery-image">
+        </a>
+        <p class="section__gallery-credit"><em>Made with <a href="https://contrib.rocks">contrib.rocks</a>.</em></p>
+    </div>
+</section>
+
+<section class="section section--supporters home-section home-section--supporters">
+    <div class="section__logos">
+        <a href="https://www.lambdatest.com/?utm_source=scanapi&utm_medium=sponsor" target="_blank" class="section__logo-link">
+            <img src="{{ "/assets/images/lambdatest-logo.png" | relative_url }}" alt="LambdaTest" class="section__logo-image" />
+        </a>
+        <a href="https://www.redhat.com/" target="_blank" class="section__logo-link">
+            <img src="{{ "/assets/images/red-hat-logo.png" | relative_url }}" alt="Red Hat" class="section__logo-image" />
+        </a>
+    </div>
+    <div class="section__content">
+        <h2 class="section__title">Supporters</h2>
+        <p class="section__text">We are grateful for the support of our backers over time. Their contributions have been instrumental in helping us maintain and improve ScanAPI.</p>
+        <p class="section__text">Your support helps us keep the project alive and growing.</p>
+        <a href="https://opencollective.com/scanapi" class="section__button">Become a backer</a>
+    </div>
 </section>

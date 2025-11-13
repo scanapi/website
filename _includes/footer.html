@@ -1,12 +1,12 @@
-<footer class="footer">
-  <div class="footer-contact">
-    <a href="{{ '/' | relative_url }}">
+<footer class="footer site-footer">
+  <div class="footer-contact site-footer__contact">
+    <a href="{{ '/' | relative_url }}" class="site-footer__logo-link">
       <img
-        class="footer-logo"
+        class="footer-logo site-footer__logo"
         src="{{ '/assets/images/scanapi.svg' | relative_url }}"
       />
     </a>
-    <div class="footer-contact-text">
+    <div class="footer-contact-text site-footer__contact-text">
       <span
         >Any help? Contact us via
         <a href="https://github.com/scanapi/scanapi/issues" target="_blank">
@@ -32,23 +32,23 @@
     </div>
   </div>
 
-  <div class="footer-copyright">
-    <div class="footer-icons">
-      <a class="nav-icon" href="https://twitter.com/scanapi_" target="_blank">
-        <img src="{{ '/assets/images/twitter.svg' | relative_url}}" />
+  <div class="footer-copyright site-footer__bottom">
+    <div class="footer-icons site-footer__social">
+      <a class="nav-icon site-footer__social-link" href="https://twitter.com/scanapi_" target="_blank">
+        <img class="site-footer__social-icon" src="{{ '/assets/images/twitter.svg' | relative_url}}" />
       </a>
       <a
-        class="nav-icon"
+        class="nav-icon site-footer__social-link"
         href="https://github.com/scanapi/scanapi"
         target="_blank"
       >
-        <img src="{{'/assets/images/github-logo.svg' | relative_url}}" />
+        <img class="site-footer__social-icon" src="{{'/assets/images/github-logo.svg' | relative_url}}" />
       </a>
-      <a class="nav-icon" href="https://discord.scanapi.dev" target="_blank">
-        <img src="{{'/assets/images/discord-logo.svg' | relative_url}}" />
+      <a class="nav-icon site-footer__social-link" href="https://discord.scanapi.dev" target="_blank">
+        <img class="site-footer__social-icon" src="{{'/assets/images/discord-logo.svg' | relative_url}}" />
       </a>
     </div>
-    <div class="footer-copyright-text">
+    <div class="footer-copyright-text site-footer__copyright">
       <span>
         The contents of this website are © {{ 'now' | date: "%Y" }} under the
         terms of the

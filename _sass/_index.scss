@@ -1,0 +1,543 @@
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+    margin: 0;
+    transition: all 0.3s ease;
+
+    &__image {
+        max-height: 350px;
+        // Fallback para navegadores sem suporte a filter
+        box-shadow: 5px 5px 5px $shadow-color;
+        filter: drop-shadow(5px 5px 5px $shadow-color);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    &__content {
+        max-width: 650px;
+    }
+
+    &__title {
+        font-weight: 700;
+        color: $primary-color;
+        font-size: $large-font-size;
+        margin-bottom: 30px;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            // Fallback: cor sólida antes do gradiente
+            background-color: $primary-color;
+            background: linear-gradient(90deg, $primary-color, lighten($primary-color, 15%));
+            margin-top: 15px;
+            border-radius: 2px;
+        }
+    }
+
+    &__subtitle {
+        color: $primary-color;
+        font-weight: bold;
+        padding: 10px 0px;
+    }
+
+    &__text {
+        font-size: $normal-font-size;
+        line-height: 1.8;
+        margin-bottom: 15px;
+        color: lighten($base-gray, 10%);
+    }
+
+    &__button {
+        display: inline-block;
+        padding: 12px 30px;
+        // Fallback: cor sólida antes do gradiente
+        background-color: $primary-color;
+        background: linear-gradient(135deg, $primary-color, darken($primary-color, 5%));
+        color: $light-color;
+        text-decoration: none;
+        border-radius: 25px;
+        margin-top: 15px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        // Fallback: box-shadow antes de filter
+        box-shadow: 4px 3px 5px $shadow-color;
+        filter: drop-shadow(4px 3px 5px $shadow-color);
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s ease;
+        }
+
+        &:hover {
+            background-color: lighten($primary-color, 3%);
+            background: linear-gradient(135deg, lighten($primary-color, 3%), $primary-color);
+            transform: translateY(-3px);
+            box-shadow: 6px 5px 8px $shadow-color;
+            filter: drop-shadow(6px 5px 8px $shadow-color);
+            color: $light-color;
+
+            &::before {
+                left: 100%;
+            }
+        }
+    }
+
+    &__gallery {
+        margin-left: 60px;
+        text-align: center;
+
+        &-link {
+            display: inline-block;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+
+        &-image {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin: 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+
+            &:hover {
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        &-credit {
+            margin-top: 15px;
+            font-size: 14px;
+            color: $base-gray;
+
+            a {
+                color: $primary-color;
+                text-decoration: none;
+                transition: color 0.2s ease;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: lighten($primary-color, 5%);
+                }
+            }
+        }
+    }
+
+    &__logos {
+        margin-right: 60px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    &__logo-link {
+        display: inline-block;
+        padding: 20px;
+        background: $light-color;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    &__logo-image {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        display: block;
+    }
+
+    &--reports {
+        // Fallback: cor sólida antes do gradiente
+        background-color: $light-primary-color;
+        background: linear-gradient(135deg, $light-primary-color, lighten($light-primary-color, 2%));
+        box-shadow: 0px 2px 5px 0px $shadow-color;
+
+        .section__image {
+            margin-left: 60px;
+        }
+    }
+
+    &--tests {
+        .section__image {
+            margin-right: 60px;
+        }
+    }
+
+    &--contributors {
+        // Fallback: cor sólida antes do gradiente
+        background-color: $light-primary-color;
+        background: linear-gradient(135deg, $light-primary-color, lighten($light-primary-color, 2%));
+        box-shadow: 0px 2px 5px 0px $shadow-color;
+    }
+}
+
+.cover {
+    height: 28em;
+    // Fallback: cor sólida antes do gradiente de imagem
+    background-color: $darker-color;
+    background-image: linear-gradient(rgba(22, 22, 22, 0.3), rgba(22, 22, 22, 0.4)), url("https://raw.githubusercontent.com/scanapi/website/master/assets/images/cover.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $darker-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 80px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        // Fallback: cor sólida antes do gradiente
+        background-color: $primary-color;
+        background: linear-gradient(90deg, $primary-color, lighten($primary-color, 15%), $primary-color);
+    }
+
+    &__content {
+        padding-left: 100px;
+        max-width: 700px;
+        box-sizing: content-box;
+        animation: fadeInUp 0.8s ease-out;
+
+        // Respeitar preferência de movimento reduzido (prefers-reduced-motion já aplicado globalmente)
+    }
+
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        letter-spacing: 1px;
+    }
+
+    &__subtitle {
+        font-size: $larger-font-size;
+        font-weight: 400;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        line-height: 1.4;
+    }
+
+    &__buttons {
+        display: flex;
+        text-align: center;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    &__button {
+        padding: 14px 32px;
+        // Fallback: cor sólida antes do gradiente
+        background-color: $primary-color;
+        background: linear-gradient(135deg, $primary-color, darken($primary-color, 5%));
+        width: 150px;
+        border-radius: 25px;
+        text-decoration: none;
+        color: $light-color;
+        font-size: $normal-font-size;
+        text-transform: uppercase;
+        font-weight: 600;
+        // Fallback: box-shadow antes de filter
+        box-shadow: 4px 3px 5px rgba(0, 0, 0, 0.3);
+        filter: drop-shadow(4px 3px 5px rgba(0, 0, 0, 0.3));
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 6px 5px 10px rgba(0, 0, 0, 0.4);
+            filter: drop-shadow(6px 5px 10px rgba(0, 0, 0, 0.4));
+            background-color: lighten($primary-color, 3%);
+            background: linear-gradient(135deg, lighten($primary-color, 3%), $primary-color);
+            color: $light-color;
+        }
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.features {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 60px;
+    padding: 40px 20px;
+
+    &__grid {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        min-width: 280px;
+        max-width: 350px;
+        text-align: center;
+        padding: 30px 20px;
+        background: $light-color;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            // Fallback: cor sólida antes do gradiente
+            background-color: $primary-color;
+            background: linear-gradient(90deg, $primary-color, lighten($primary-color, 15%));
+            border-radius: 15px 15px 0 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+
+            &::before {
+                opacity: 1;
+            }
+
+            .features__icon {
+                transform: scale(1.1) rotate(5deg);
+            }
+        }
+    }
+
+    &__icon {
+        height: 150px;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+        // Fallback: box-shadow antes de filter
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    }
+
+    &__title {
+        font-size: $large-font-size;
+        margin: 15px 0;
+        color: $primary-color;
+        font-weight: 600;
+    }
+
+    &__description {
+        font-size: $normal-font-size;
+        line-height: 1.7;
+        color: lighten($base-gray, 15%);
+    }
+}
+
+// ===== Responsivo: mobile-first unificado =====
+
+// Tablet e abaixo (≤992px)
+@media (max-width: $screen-lg) {
+    .section {
+        padding: 50px 30px;
+
+        &--reports {
+            flex-direction: column;
+
+            .section__image {
+                margin-top: 40px;
+                margin-left: 0;
+                max-width: 100%;
+            }
+        }
+
+        &--tests {
+            flex-direction: column-reverse;
+
+            .section__image {
+                margin-top: 40px;
+                margin-right: 0;
+                max-width: 100%;
+            }
+        }
+
+        &--contributors {
+            flex-direction: column;
+
+            .section__gallery {
+                margin-left: 0;
+                margin-top: 40px;
+
+                &-image {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        &--supporters {
+            flex-direction: column-reverse;
+
+            .section__logos {
+                margin-right: 0;
+                margin-top: 40px;
+                flex-direction: row;
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .section__logo-link {
+                padding: 15px;
+            }
+
+            .section__logo-image {
+                max-width: 200px;
+            }
+        }
+    }
+
+    .cover {
+        height: 26em;
+
+        &__content {
+            padding-left: 40px;
+            padding-right: 40px;
+            text-align: center;
+            max-width: 100%;
+        }
+
+        &__buttons {
+            justify-content: center;
+        }
+    }
+
+    .features {
+        width: 90%;
+
+        &__grid {
+            gap: 30px;
+        }
+
+        &__item {
+            min-width: 250px;
+        }
+    }
+}
+
+// Mobile e abaixo (≤768px)
+@media (max-width: $screen-md) {
+    .cover {
+        height: auto;
+        min-height: 24em;
+        padding: 40px 20px;
+
+        &__title {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        &__subtitle {
+            font-size: 28px;
+            line-height: 1.3;
+        }
+
+        &__buttons {
+            margin-top: 25px;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        &__button {
+            width: 100%;
+            max-width: 200px;
+        }
+    }
+
+    .features {
+        width: 95%;
+
+        &__icon {
+            height: 120px;
+        }
+
+        &__grid {
+            gap: 25px;
+        }
+
+        &__item {
+            padding: 25px 15px;
+        }
+    }
+
+    .section {
+        padding: 40px 20px;
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__subtitle {
+            font-size: 20px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+
+        &__logos {
+            .section__logo-link {
+                padding: 12px;
+            }
+
+            .section__logo-image {
+                max-width: 180px;
+            }
+        }
+    }
+}
