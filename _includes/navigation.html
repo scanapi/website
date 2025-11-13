@@ -11,38 +11,90 @@
 
             <div class="collapse navbar-collapse site-header__collapse justify-content-end" id="navbar-collapse">
                 <ul class="navbar-nav site-nav mb-2 mb-lg-0">
-                                        {% for item in site.data.navigation %}
-                                                <li class="site-nav__item">
-                                                        {%- assign is_current = false -%}
-                                                        {%- if page.url == item.link -%}
-                                                            {%- assign is_current = true -%}
-                                                        {%- elsif page.layout == 'docs' and item.link == '/docs.html' -%}
-                                                            {%- assign is_current = true -%}
-                                                        {%- elsif page.layout == 'tutorial' and item.name == 'Tutorial' -%}
-                                                            {%- assign is_current = true -%}
-                                                        {%- elsif page.layout == 'community' and item.link == '/community.html' -%}
-                                                            {%- assign is_current = true -%}
-                                                        {%- endif -%}
-                                                        <a href="{{ item.link | relative_url}}"  class="nav-item site-nav__link{% if is_current %} current{% endif %}">{{ item.name }}</a>
-                                                </li>
-                                        {% endfor %}
+                    {% for item in site.data.navigation %}
+                        <li class="site-nav__item">
+                            {%- assign is_current = false -%}
+                            {%- if page.url == item.link -%}
+                                {%- assign is_current = true -%}
+                            {%- elsif page.layout == 'docs' and item.link == '/docs.html' -%}
+                                {%- assign is_current = true -%}
+                            {%- elsif page.layout == 'tutorial' and item.name == 'Tutorial' -%}
+                                {%- assign is_current = true -%}
+                            {%- elsif page.layout == 'community' and item.link == '/community.html' -%}
+                                {%- assign is_current = true -%}
+                            {%- endif -%}
+                            <a href="{{ item.link | relative_url}}" class="nav-item site-nav__link{% if is_current %} current{% endif %}">{{ item.name }}</a>
+                        </li>
+                    {% endfor %}
+
+                    <li class="site-nav__item site-nav__item--dropdown">
+                        <a class="nav-item site-nav__link site-nav__link--dropdown" href="#" role="button">
+                            Resources
+                            <svg class="site-nav__dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <ul class="site-nav__dropdown">
+                            <li><a class="site-nav__dropdown-link" href="https://github.com/scanapi/examples" target="_blank">
+                                <span class="site-nav__dropdown-icon-wrapper">📚</span>
+                                <span class="site-nav__dropdown-text">
+                                    <strong>Examples</strong>
+                                    <small>Sample API specifications</small>
+                                </span>
+                            </a></li>
+                            <li><a class="site-nav__dropdown-link" href="https://github.com/marketplace/actions/scanapi" target="_blank">
+                                <span class="site-nav__dropdown-icon-wrapper">⚡</span>
+                                <span class="site-nav__dropdown-text">
+                                    <strong>GitHub Action</strong>
+                                    <small>CI/CD integration</small>
+                                </span>
+                            </a></li>
+                            <li><a class="site-nav__dropdown-link" href="https://marketplace.visualstudio.com/items?itemName=ScanAPI.scanapi" target="_blank">
+                                <span class="site-nav__dropdown-icon-wrapper">🔌</span>
+                                <span class="site-nav__dropdown-text">
+                                    <strong>VSCode Plugin</strong>
+                                    <small>Editor extension</small>
+                                </span>
+                            </a></li>
+                        </ul>
+                    </li>
+
+                    <li class="site-nav__item site-nav__item--divider"></li>
+
                     <li class="site-nav__item">
-                        <a class="nav-item site-nav__link" href="https://github.com/scanapi/examples" target="_blank">Examples</a>
+                        <a class="nav-item site-nav__icon-link" href="https://twitter.com/scanapi_" target="_blank" aria-label="Twitter">
+                            <img class="site-nav__icon" src="{{ "/assets/images/twitter.svg" | relative_url }}" alt="Twitter">
+                        </a>
                     </li>
                     <li class="site-nav__item">
-                        <a class="nav-item site-nav__link" href="https://github.com/marketplace/actions/scanapi" target="_blank">GitHub Action</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="nav-item site-nav__link" href="https://marketplace.visualstudio.com/items?itemName=ScanAPI.scanapi" target="_blank">VSCode Plugin</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="nav-item nav-icon site-nav__icon-link" href="https://twitter.com/scanapi_"> <img class="site-nav__icon" src="{{ "/assets/images/twitter.svg" | relative_url }}"></a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="nav-item nav-icon site-nav__icon-link" href="https://github.com/scanapi/scanapi"><img class="site-nav__icon" src="{{ "/assets/images/github-logo.svg" | relative_url }}"></a>
+                        <a class="nav-item site-nav__icon-link" href="https://github.com/scanapi/scanapi" target="_blank" aria-label="GitHub">
+                            <img class="site-nav__icon" src="{{ "/assets/images/github-logo.svg" | relative_url }}" alt="GitHub">
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
+
+<script>
+// Dropdown toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggle = document.querySelector('.site-nav__link--dropdown');
+    const dropdownItem = document.querySelector('.site-nav__item--dropdown');
+
+    if (dropdownToggle && dropdownItem) {
+        dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            dropdownItem.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!dropdownItem.contains(e.target)) {
+                dropdownItem.classList.remove('active');
+            }
+        });
+    }
+});
+</script>

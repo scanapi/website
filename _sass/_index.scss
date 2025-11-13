@@ -999,3 +999,294 @@
         }
     }
 }
+
+// ========================================
+// RESPONSIVE - Mobile Improvements
+// ========================================
+
+@media (max-width: $screen-lg) {
+    // Sections gerais
+    .section {
+        flex-direction: column;
+        padding: 60px 30px;
+
+        &__content {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+
+        &__image-wrapper {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        &--reports,
+        &--tests {
+            .section__content {
+                order: 1;
+            }
+
+            .section__image-wrapper {
+                order: 2;
+                margin: 0 !important;
+            }
+        }
+    }
+
+    // Contributors
+    .contributors {
+        &__stats {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        &__stat-item {
+            padding: 20px;
+        }
+    }
+
+    // Supporters
+    .supporters {
+        &__logos {
+            gap: 30px;
+        }
+
+        &__logo-link {
+            padding: 30px;
+        }
+    }
+}
+
+@media (max-width: $screen-md) {
+    // Hero cover
+    .cover {
+        &__title {
+            font-size: 36px;
+        }
+
+        &__subtitle {
+            font-size: 22px;
+        }
+    }
+
+    // Sections
+    .section {
+        padding: 40px 20px;
+
+        &__title {
+            font-size: 28px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+
+        &__button {
+            padding: 12px 30px;
+            font-size: 16px;
+        }
+
+        &__features-list {
+            gap: 12px;
+        }
+
+        &__feature-item {
+            padding: 12px;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+
+        &__feature-icon {
+            font-size: 20px;
+        }
+
+        &__feature-text {
+            font-size: 15px;
+        }
+
+        &__image {
+            max-height: 300px;
+        }
+
+        &__image-wrapper {
+            padding: 15px;
+        }
+    }
+
+    // Contributors
+    .contributors {
+        margin: 20px auto;
+
+        &__grid {
+            margin-bottom: 30px;
+        }
+
+        &__image {
+            padding: 15px;
+        }
+
+        &__cta {
+            padding: 40px 20px;
+        }
+
+        &__cta-title {
+            font-size: 26px;
+        }
+
+        &__cta-text {
+            font-size: 16px;
+        }
+
+        &__buttons {
+            flex-direction: column;
+            gap: 15px;
+
+            .section__button {
+                width: 100%;
+            }
+        }
+    }
+
+    // Supporters
+    .section--supporters {
+        padding: 60px 20px;
+    }
+
+    .supporters {
+        &__title {
+            font-size: 32px;
+        }
+
+        &__text {
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        &__logos {
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        &__logo-link {
+            padding: 25px;
+        }
+
+        &__logo-image {
+            max-width: 150px;
+        }
+
+        &__cta {
+            margin-top: 30px;
+        }
+
+        &__cta-text {
+            font-size: 15px;
+            padding: 12px;
+        }
+    }
+
+    // Image modal
+    .image-modal__content {
+        max-width: 95%;
+        max-height: 80%;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    // Extra small screens
+    .cover {
+        &__title {
+            font-size: 28px;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+        }
+
+        &__button {
+            font-size: 16px;
+            padding: 12px 25px;
+        }
+    }
+
+    .features {
+        &__item {
+            height: auto;
+            min-height: 300px;
+        }
+
+        &__icon {
+            height: 80px;
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+    }
+
+    .section {
+        padding: 30px 15px;
+
+        &__title {
+            font-size: 24px;
+
+            &::after {
+                width: 40px;
+                height: 3px;
+            }
+        }
+
+        &__text {
+            font-size: 15px;
+        }
+
+        &__button {
+            width: 100%;
+            max-width: none;
+        }
+
+        &__image {
+            max-height: 250px;
+        }
+    }
+
+    .contributors {
+        &__cta-title {
+            font-size: 22px;
+        }
+
+        &__buttons {
+            .section__button {
+                font-size: 16px;
+                padding: 12px 20px;
+            }
+        }
+    }
+
+    .supporters {
+        &__title {
+            font-size: 26px;
+        }
+
+        &__text {
+            font-size: 15px;
+        }
+
+        &__logos {
+            grid-template-columns: 1fr;
+        }
+
+        &__logo-link {
+            padding: 20px;
+        }
+
+        &__logo-image {
+            max-width: 140px;
+        }
+    }
+}

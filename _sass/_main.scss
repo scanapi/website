@@ -186,16 +186,206 @@ a img { border: 0; outline: none; }
 }
 
 // ===== BEM dual mapping (merged from _layout.scss) =====
-.site-header { background-color: $base-gray; box-shadow: 0 4px 4px rgba(0,0,0,.25); }
-.site-header__nav { position:relative; }
-.site-header__logo { height:55px; }
-.site-nav { list-style:none; padding-left:0; }
-.site-nav__item { display:inline-block; }
-.site-nav__link { text-decoration:none; opacity:.8; color:$light-color; margin:0 15px; font-size:18px; }
-.site-nav__link:hover { opacity:1; color:$light-color; }
-.site-nav__icon { width:30px; height:30px; }
-.site-nav__icon-link { opacity:.8; }
-.site-nav__icon-link:hover { opacity:1; }
+// Header
+.site-header {
+    background: linear-gradient(135deg, $base-gray 0%, darken($base-gray, 3%) 100%);
+    box-shadow: 0 2px 10px rgba(0,0,0,.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header__nav {
+    position: relative;
+    padding: 10px 0;
+}
+
+.site-header__logo {
+    height: 50px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.site-header__logo-link {
+    display: inline-block;
+    outline: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+// Navigation
+.site-nav {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.site-nav__item {
+    display: inline-block;
+    position: relative;
+
+    &--divider {
+        width: 1px;
+        height: 24px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 0 10px;
+    }
+}
+
+.site-nav__link {
+    text-decoration: none;
+    color: $light-color;
+    font-size: 16px;
+    padding: 8px 16px;
+    display: inline-block;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    font-weight: 500;
+
+    &:hover {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.05);
+        color: $light-color;
+    }
+
+    &.current {
+        color: $primary-color;
+        opacity: 1;
+        background: rgba(255, 113, 99, 0.1);
+    }
+}
+
+.site-nav__link--dropdown {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.site-nav__dropdown-icon {
+    transition: transform 0.3s ease;
+
+    .site-nav__item--dropdown.active & {
+        transform: rotate(180deg);
+    }
+}
+
+.site-nav__dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: $base-gray;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    min-width: 280px;
+    padding: 8px;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 100;
+
+    .site-nav__item--dropdown.active & {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    li {
+        margin: 0;
+    }
+}
+
+.site-nav__dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: $light-color;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(255, 113, 99, 0.15);
+
+        .site-nav__dropdown-icon-wrapper {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.site-nav__dropdown-icon-wrapper {
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.site-nav__dropdown-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    strong {
+        font-size: 15px;
+        font-weight: 600;
+        color: $light-color;
+    }
+
+    small {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.site-nav__icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.site-nav__icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 0 4px;
+
+    &:hover {
+        background: rgba(255, 113, 99, 0.2);
+        transform: translateY(-2px);
+
+        .site-nav__icon {
+            transform: scale(1.1);
+        }
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(255, 113, 99, 0.3);
+    }
+}
 
 // Footer
 .site-footer {
@@ -409,28 +599,97 @@ a img { border: 0; outline: none; }
 
     .nav-item { margin: 0 10px; }
     .nav-icon { margin: 0 0 0 7px; }
+
+    // Dropdown no mobile
+    .site-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .site-nav__item--dropdown {
+        width: 100%;
+    }
+
+    .site-nav__link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .site-nav__link--dropdown {
+        justify-content: center;
+    }
+
+    .site-nav__dropdown {
+        position: static;
+        width: 100%;
+        margin-top: 8px;
+        transform: none !important;
+    }
+
+    .site-nav__item--divider {
+        width: 100%;
+        height: 1px;
+        margin: 10px 0;
+    }
+
+    .site-nav__icon-link {
+        margin: 5px auto;
+    }
 }
 
 // Mobile e abaixo (≤768px)
 @media (max-width: $screen-md) {
+    // Header
+    .site-header {
+        &__logo {
+            height: 40px;
+        }
+    }
+
     // Rodapé BEM
     .site-footer {
-        padding: 40px 30px 30px;
+        padding: 40px 20px 30px;
     }
 
     .site-footer__contact {
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 25px;
+        padding-bottom: 30px;
     }
 
     .site-footer__contact-text {
         text-align: center;
         margin-bottom: 0;
+        font-size: 14px;
+        gap: 10px;
     }
 
     .site-footer__logo-link {
         order: -1;
+    }
+
+    .site-footer__logo {
+        height: 50px;
+    }
+
+    .site-footer__social {
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .site-footer__social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .site-footer__social-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .site-footer__copyright {
+        font-size: 13px;
     }
 
     // Rodapé legado
