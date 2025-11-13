@@ -721,3 +721,122 @@
         }
     }
 }
+
+// Contributors Section
+.section--contributors {
+    flex-direction: column;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.contributors {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+
+    &__grid {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    &__link {
+        display: block;
+        transition: transform 0.3s ease, filter 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+        border-radius: 15px;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    &__stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin: 0;
+
+        @media (max-width: $screen-md) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+
+    &__stat-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 30px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    &__stat-icon {
+        font-size: 36px;
+        line-height: 1;
+        flex-shrink: 0;
+    }
+
+    &__stat-content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__stat-label {
+        font-size: 18px;
+        font-weight: 600;
+        color: $base-gray;
+    }
+
+    &__stat-desc {
+        font-size: 14px;
+        color: $base-gray;
+        line-height: 1.5;
+    }
+
+    &__cta {
+        text-align: center;
+        padding: 60px 40px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    &__cta-title {
+        font-size: 32px;
+        font-weight: 700;
+        color: $base-gray;
+        margin-bottom: 15px;
+    }
+
+    &__cta-text {
+        font-size: 18px;
+        color: $base-gray;
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
