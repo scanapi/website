@@ -197,17 +197,166 @@ a img { border: 0; outline: none; }
 .site-nav__icon-link { opacity:.8; }
 .site-nav__icon-link:hover { opacity:1; }
 
-.site-footer { background-color:$base-gray; color:$light-color; line-height:1.5; padding:20px 100px; }
-.site-footer__contact { display:flex; justify-content:space-between; }
-.site-footer__contact-text { display:flex; flex-direction:column; justify-content:space-between; text-align:right; }
-.site-footer__logo { height:55px; }
-.site-footer__social { margin-bottom:10px; }
-.site-footer__social-link { margin:0 5px; }
-.site-footer__social-icon { width:30px; height:30px; }
-.site-footer a { color:$primary-color; text-decoration:none; }
-.site-footer a:hover { color:$primary-color; text-decoration:underline; }
-.site-footer__bottom { display:flex; flex-direction:column; align-items:center; }
-.site-footer__copyright { text-align:center; }
+// Footer
+.site-footer {
+    background: linear-gradient(135deg, darken($base-gray, 5%) 0%, $base-gray 100%);
+    color: $light-color;
+    line-height: 1.6;
+    padding: 60px 100px 40px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, $primary-color, lighten($primary-color, 15%), $primary-color);
+    }
+}
+
+.site-footer__contact {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer__contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: right;
+    font-size: 15px;
+    opacity: 0.9;
+
+    span {
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.site-footer__logo-link {
+    display: inline-block;
+    border: none;
+    outline: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.site-footer__logo {
+    height: 60px;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        filter: drop-shadow(0 4px 8px rgba(255, 113, 99, 0.3));
+    }
+}
+
+.site-footer__social {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.site-footer__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    border: none;
+    transition: all 0.3s ease;
+    outline: none;
+    text-decoration: none;
+
+    &::after {
+        display: none;
+    }
+
+    &:hover {
+        background: rgba(255, 113, 99, 0.2);
+        transform: translateY(-3px);
+        text-decoration: none;
+
+        .site-footer__social-icon {
+            transform: scale(1.1);
+        }
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(255, 113, 99, 0.3);
+    }
+}
+
+.site-footer__social-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.site-footer a {
+    color: $primary-color;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: $primary-color;
+        transition: width 0.3s ease;
+    }
+
+    &:hover {
+        color: lighten($primary-color, 10%);
+
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+.site-footer__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.site-footer__copyright {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    opacity: 0.8;
+
+    span {
+        line-height: 1.6;
+    }
+}
 
 .docs-page { width:100%; display:flex; min-height:100vh; }
 .docs-page__sidenav { display:flex; flex-direction:column; width:300px; margin:30px 40px 20px 50px; padding-right:10px; text-align:right; border-right:1px solid #ccc; }
@@ -265,9 +414,24 @@ a img { border: 0; outline: none; }
 // Mobile e abaixo (≤768px)
 @media (max-width: $screen-md) {
     // Rodapé BEM
-    .site-footer { padding: 20px 20px; }
-    .site-footer__contact { flex-direction: column; align-items: center; }
-    .site-footer__contact-text { text-align: center; margin-bottom: 20px; }
+    .site-footer {
+        padding: 40px 30px 30px;
+    }
+
+    .site-footer__contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .site-footer__contact-text {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .site-footer__logo-link {
+        order: -1;
+    }
 
     // Rodapé legado
     .footer {
