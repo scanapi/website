@@ -369,14 +369,13 @@
     height: 28em;
     // Fallback: cor sólida antes do gradiente de imagem
     background-color: $darker-color;
-    background-image: linear-gradient(rgba(22, 22, 22, 0.3), rgba(22, 22, 22, 0.4)), url("https://raw.githubusercontent.com/scanapi/website/master/assets/images/cover.jpg");
+    background-image: linear-gradient(rgba(22, 22, 22, 0.15), rgba(22, 22, 22, 0.2)), url("https://raw.githubusercontent.com/scanapi/website/master/assets/images/cover.jpg");
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: $darker-color;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     margin-bottom: 80px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
     position: relative;
