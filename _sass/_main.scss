@@ -200,6 +200,58 @@ a img { border: 0; outline: none; }
     padding: 10px 0;
 }
 
+// Mobile toggler (hambúrguer)
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    padding: 8px;
+    margin-left: auto;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 26px;
+    height: 2px;
+    background: $light-color;
+    position: relative;
+    border-radius: 2px;
+    transition: background 0.2s ease;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 26px;
+        height: 2px;
+        background: $light-color;
+        border-radius: 2px;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    &::before { top: -8px; }
+    &::after { top: 8px; }
+}
+
+// Estado visual quando o menu está aberto
+.navbar-toggler.is-open .navbar-toggler-icon {
+    background: transparent;
+}
+.navbar-toggler.is-open .navbar-toggler-icon::before {
+    transform: translateY(8px) rotate(45deg);
+}
+.navbar-toggler.is-open .navbar-toggler-icon::after {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 .site-header__logo {
     height: 50px;
     transition: transform 0.3s ease;
@@ -601,9 +653,32 @@ a img { border: 0; outline: none; }
     .nav-icon { margin: 0 0 0 7px; }
 
     // Dropdown no mobile
+    // Colapso do menu no mobile (sem Bootstrap JS)
+    .site-header__collapse {
+        display: none;
+        width: 100%;
+        background: $base-gray;
+        // Torna o menu um overlay scrollável independente
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 900; // abaixo do botão hambúrguer (header tem z-index:1000)
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 80px 0 20px; // espaço para logo/botão no topo
+    }
+
+    .site-header__collapse.show {
+        display: block;
+    }
+
     .site-nav {
         flex-direction: column;
         align-items: stretch;
+        gap: 18px;
+        padding: 0 20px;
     }
 
     .site-nav__item--dropdown {
@@ -613,6 +688,9 @@ a img { border: 0; outline: none; }
     .site-nav__link {
         width: 100%;
         text-align: center;
+        border-radius: 12px;
+        padding: 16px 20px;
+        background: rgba(255,255,255,0.04);
     }
 
     .site-nav__link--dropdown {
@@ -629,7 +707,8 @@ a img { border: 0; outline: none; }
     .site-nav__item--divider {
         width: 100%;
         height: 1px;
-        margin: 10px 0;
+        margin: 6px 0;
+        background: rgba(255,255,255,0.08);
     }
 
     .site-nav__icon-link {
@@ -722,4 +801,9 @@ a img { border: 0; outline: none; }
     .tutorial-page__main .pagination a img { width: 18px; }
 
     .community-page__main iframe { width: 100%; }
+}
+
+// Impedir scroll do body quando o menu mobile está aberto
+body.no-scroll {
+    overflow: hidden;
 }

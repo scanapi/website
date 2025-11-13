@@ -78,21 +78,66 @@
 </header>
 
 <script>
-// Dropdown toggle
+// Dropdown e menu mobile (sem dependência de Bootstrap JS)
 document.addEventListener('DOMContentLoaded', function() {
+    // Dropdown Resources
     const dropdownToggle = document.querySelector('.site-nav__link--dropdown');
     const dropdownItem = document.querySelector('.site-nav__item--dropdown');
 
     if (dropdownToggle && dropdownItem) {
         dropdownToggle.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             dropdownItem.classList.toggle('active');
         });
+    }
 
-        // Close dropdown when clicking outside
+    // Menu mobile: abre/fecha colapso
+    const toggler = document.querySelector('.navbar-toggler');
+    const collapse = document.getElementById('navbar-collapse');
+
+    function closeMenu() {
+        if (!collapse) return;
+        collapse.classList.remove('show');
+        if (toggler) {
+            toggler.classList.remove('is-open');
+            toggler.setAttribute('aria-expanded', 'false');
+        }
+        document.body.classList.remove('no-scroll');
+    }
+
+    if (toggler && collapse) {
+        toggler.addEventListener('click', function(e) {
+            e.preventDefault();
+            const willOpen = !collapse.classList.contains('show');
+            collapse.classList.toggle('show');
+            toggler.classList.toggle('is-open');
+            toggler.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+            document.body.classList.toggle('no-scroll', willOpen);
+        });
+
+        // Fechar ao clicar num link do menu
+        collapse.addEventListener('click', function(e) {
+            const target = e.target;
+            if (target && (target.classList.contains('site-nav__link') || target.classList.contains('site-nav__dropdown-link'))) {
+                closeMenu();
+            }
+        });
+
+        // Clique fora fecha dropdown e menu
         document.addEventListener('click', function(e) {
-            if (!dropdownItem.contains(e.target)) {
+            if (dropdownItem && !dropdownItem.contains(e.target)) {
                 dropdownItem.classList.remove('active');
+            }
+            if (!collapse.contains(e.target) && !toggler.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // ESC fecha
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeMenu();
             }
         });
     }
