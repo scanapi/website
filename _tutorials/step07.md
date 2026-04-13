@@ -26,7 +26,7 @@ Putting it all together:
 ```yaml
 {% raw %}endpoints:
   - name: snippets-api
-    path: http://demo.scanapi.dev/api/v1/
+    path: https://demo.scanapi.dev/api/v1/
     headers:
       Content-Type: application/json
     requests:
@@ -105,7 +105,7 @@ Putting it all together:
 ```yaml
 {% raw %}endpoints:
   - name: snippets-api
-    path: http://demo.scanapi.dev/api/v1/
+    path: https://demo.scanapi.dev/api/v1/
     headers:
       Content-Type: application/json
     requests:
@@ -218,7 +218,7 @@ Putting it all together:
 ```yaml
 {% raw %}endpoints:
   - name: snippets-api
-    path: http://demo.scanapi.dev/api/v1/
+    path: https://demo.scanapi.dev/api/v1/
     headers:
       Content-Type: application/json
     requests:
@@ -276,7 +276,7 @@ Let's go ahead and add more snippet requests:
 ```yaml
 {% raw %}endpoints:
   - name: snippets-api
-    path: http://demo.scanapi.dev/api/v1/
+    path: https://demo.scanapi.dev/api/v1/
     headers:
       Content-Type: application/json
     requests:

@@ -11,7 +11,7 @@ the following content:
 ```yaml
 {% raw %}endpoints:
   - name: snippets-api
-    path: http://demo.scanapi.dev/api/v1/
+    path: https://demo.scanapi.dev/api/v1/
     headers:
       Content-Type: application/json
     requests:
