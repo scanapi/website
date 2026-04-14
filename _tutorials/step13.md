@@ -95,7 +95,7 @@ jobs:
 If you would try to run this action, you would receive the following error:
 
 ```shell
-Error to make request `http://demo.scanapi.dev/api/v1/rest-auth/login/`.
+Error to make request `https://demo.scanapi.dev/api/v1/rest-auth/login/`.
 'USER' environment variable not set or badly configured
 ```
 
@@ -251,7 +251,7 @@ Save, commit and push your changes to your `main` branch.
 If you would try to run this workflow, you would receive the following error:
 
 ```shell
-Error to make request `http://demo.scanapi.dev/api/v1/rest-auth/login/`.
+Error to make request `https://demo.scanapi.dev/api/v1/rest-auth/login/`.
 'USER' environment variable not set or badly configured
 ```
 

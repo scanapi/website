@@ -19,7 +19,7 @@ Let’s add your ScanAPI spec. Create `scanapi.yaml` in root with the following 
 ```yaml
 endpoints:
   - name: snippets-api
-    path: http://demo.scanapi.dev/api/v1/
+    path: https://demo.scanapi.dev/api/v1/
     headers:
       Content-Type: application/json
     requests:
@@ -46,7 +46,7 @@ From the output of the command, you can see that ScanAPI:
 ```shell
 INFO     Loading file scanapi.yaml # loads the specification file you created
 
-- Making request GET http://demo.scanapi.dev/api/v1/health/  # makes a GET request to the /health path
+- Making request GET https://demo.scanapi.dev/api/v1/health/  # makes a GET request to the /health path
 The documentation was generated successfully.
 It is available at -> <your_root_path>/scanapi-report.html # generates the API documentation
 ```
@@ -81,7 +81,7 @@ curl -X GET \
 -H "Accept: */*" \
 -H "Connection: keep-alive" \
 -H "Content-Type: application/json" \
--d 'None' http://demo.scanapi.dev/api/v1/health/ --compressed
+-d 'None' https://demo.scanapi.dev/api/v1/health/ --compressed
 ```
 
 And then, the response details:

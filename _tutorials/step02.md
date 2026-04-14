@@ -20,9 +20,9 @@ This is an example of a code snippet:
 
 ```json
 {
-  "url": "http://demo.scanapi.dev/api/v1/snippets/2/",
+  "url": "https://demo.scanapi.dev/api/v1/snippets/2/",
   "id": 2,
-  "highlight": "http://demo.scanapi.dev/api/v1/snippets/2/highlight/",
+  "highlight": "https://demo.scanapi.dev/api/v1/snippets/2/highlight/",
   "owner": "admin",
   "title": "Calculator",
   "code": "def add(x, y):\r\n    return x + y\r\n\r\ndef subtract(x, y):\r\n    return x - y\r\n\r\ndef multiply(x, y):\r\n    return x * y\r\n\r\ndef divide(x, y):\r\n    return x / y",
