@@ -12,3 +12,6 @@ kramdown:
 
 sass:
   quiet_deps: true
+
+include:
+  - _redirects
