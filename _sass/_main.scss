@@ -14,6 +14,7 @@ $shadow-color: #AFAFAF;
 $normal-font-size: 18px;
 $large-font-size: 26px;
 $larger-font-size: 40px;
+
 * {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
     font-size: 18px;
@@ -24,7 +25,8 @@ body {
     background-color: $light-color;
 }
 
-a, button {
+a,
+button {
     outline: none;
     -webkit-tap-highlight-color: transparent;
 
@@ -57,27 +59,11 @@ a, button {
     box-shadow: none !important;
 }
 
-/* Remover bordas/contornos nas barras laterais (docs e tutorial) */
-.docs-page__sidenav a,
-.docs-page__sidenav a:focus,
-.docs-page__sidenav a:active,
-.docs-page__sidenav a:focus-visible,
-.tutorial-page__sidenav a,
-.tutorial-page__sidenav a:focus,
-.tutorial-page__sidenav a:active,
-.tutorial-page__sidenav a:focus-visible,
-.sidenav a,
-.sidenav a:focus,
-.sidenav a:active,
-.sidenav a:focus-visible {
-    outline: none !important;
-    box-shadow: none !important;
-    border: 0 !important;
-    -webkit-tap-highlight-color: transparent;
-}
-
 /* Remove contorno em imagens dentro de links (antigos user agents) */
-a img { border: 0; outline: none; }
+a img {
+    border: 0;
+    outline: none;
+}
 
 .content {
     min-height: 100vh;
@@ -100,6 +86,7 @@ a img { border: 0; outline: none; }
 
     li {
         margin: 0;
+
         a:hover {
             opacity: 1;
             color: $light-color;
@@ -119,6 +106,7 @@ a img { border: 0; outline: none; }
 .nav-icon {
     margin: 0 0 0 7px;
     opacity: 0.8;
+
     img {
         width: 30px;
         height: 30px;
@@ -147,31 +135,38 @@ a img { border: 0; outline: none; }
     .footer-icons {
         margin-bottom: 10px;
     }
+
     a {
         color: $primary-color;
         text-decoration: none;
     }
+
     a:hover {
         color: $primary-color;
     }
+
     .footer-contact {
         display: flex;
         justify-content: space-between;
     }
+
     .footer-contact-text {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         text-align: right;
+
         span {
             margin: 3px 0;
         }
     }
+
     .footer-copyright {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         .footer-copyright-text {
             display: flex;
             flex-direction: column;
@@ -179,6 +174,7 @@ a img { border: 0; outline: none; }
             justify-content: center;
             text-align: center;
         }
+
         .footer-copyright-text span {
             margin: 2px;
         }
@@ -189,7 +185,7 @@ a img { border: 0; outline: none; }
 // Header
 .site-header {
     background: linear-gradient(135deg, $base-gray 0%, darken($base-gray, 3%) 100%);
-    box-shadow: 0 2px 10px rgba(0,0,0,.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -237,17 +233,24 @@ a img { border: 0; outline: none; }
         transition: transform 0.25s ease, opacity 0.25s ease;
     }
 
-    &::before { top: -8px; }
-    &::after { top: 8px; }
+    &::before {
+        top: -8px;
+    }
+
+    &::after {
+        top: 8px;
+    }
 }
 
 // Estado visual quando o menu está aberto
 .navbar-toggler.is-open .navbar-toggler-icon {
     background: transparent;
 }
+
 .navbar-toggler.is-open .navbar-toggler-icon::before {
     transform: translateY(8px) rotate(45deg);
 }
+
 .navbar-toggler.is-open .navbar-toggler-icon::after {
     transform: translateY(-8px) rotate(-45deg);
 }
@@ -269,6 +272,7 @@ a img { border: 0; outline: none; }
         outline: none;
     }
 }
+
 // Navigation
 .site-nav {
     list-style: none;
@@ -600,45 +604,29 @@ a img { border: 0; outline: none; }
     }
 }
 
-.docs-page { width:100%; display:flex; min-height:100vh; }
-.docs-page__sidenav { display:flex; flex-direction:column; width:300px; margin:30px 40px 20px 50px; padding-right:10px; text-align:right; border-right:1px solid #ccc; }
-.docs-page__sidenav a { text-decoration:none; color:$darker-color; padding-bottom:20px; }
-.docs-page__sidenav a:hover { opacity:.6; }
-.docs-page__sidenav .current { color:$primary-color; }
-.docs-page__sidenav h2 { text-transform:uppercase; font-size:18px; }
-.docs-page__main { width:100%; margin:20px 40px 20px 0; }
-
-.tutorial-page { width:100%; display:flex; min-height:100vh; }
-.tutorial-page__sidenav { display:flex; flex-direction:column; width:300px; margin:30px 40px 20px 50px; padding-right:10px; text-align:right; border-right:1px solid #ccc; }
-.tutorial-page__sidenav a { text-decoration:none; color:$darker-color; padding-bottom:20px; font-weight:bold; }
-.tutorial-page__sidenav a:hover { opacity:.6; }
-.tutorial-page__sidenav .current { color:$primary-color; }
-.tutorial-page__main { width:100%; margin:20px 40px 20px 0; }
-.tutorial-page__main .pagination { display:flex; justify-content:space-between; font-size:20px; }
-.tutorial-page__main .pagination a img { width:25px; }
-.tutorial-page__main .pagination a img.previous { transform:rotate(180deg); }
-.tutorial-page__main .pagination a:hover { color:$primary-color; }
-
-.community-page { width:100%; display:flex; min-height:100vh; padding:20px; }
-.community-page__main { width:100%; }
-.community-page__main iframe { width:420px; height:315px; }
-
-.home-page .hero { position:relative; }
-.home-page .feature-list { position:relative; }
-.home-section { position:relative; }
 
 // ===== Responsivo BEM unificado: mobile-first =====
 
 // Tablet grande e abaixo (≤1400px)
 @media (max-width: $screen-xxl) {
-    .scanapi-logo { margin-left: 0; }
-    .nav-bar ul { margin-right: 0; }
+    .scanapi-logo {
+        margin-left: 0;
+    }
+
+    .nav-bar ul {
+        margin-right: 0;
+    }
 }
 
 // Desktop médio e abaixo (≤1200px)
 @media (max-width: $screen-xl) {
-    .nav-item { margin: 0 10px; }
-    .nav-icon { margin: 0 0 0 7px; }
+    .nav-item {
+        margin: 0 10px;
+    }
+
+    .nav-icon {
+        margin: 0 0 0 7px;
+    }
 }
 
 // Tablet e abaixo (≤992px)
@@ -646,11 +634,18 @@ a img { border: 0; outline: none; }
     .nav-bar {
         text-align: center;
 
-        li { margin: 8px 0; }
+        li {
+            margin: 8px 0;
+        }
     }
 
-    .nav-item { margin: 0 10px; }
-    .nav-icon { margin: 0 0 0 7px; }
+    .nav-item {
+        margin: 0 10px;
+    }
+
+    .nav-icon {
+        margin: 0 0 0 7px;
+    }
 
     // Dropdown no mobile
     // Colapso do menu no mobile (sem Bootstrap JS)
@@ -690,7 +685,7 @@ a img { border: 0; outline: none; }
         text-align: center;
         border-radius: 12px;
         padding: 16px 20px;
-        background: rgba(255,255,255,0.04);
+        background: rgba(255, 255, 255, 0.04);
     }
 
     .site-nav__link--dropdown {
@@ -708,7 +703,7 @@ a img { border: 0; outline: none; }
         width: 100%;
         height: 1px;
         margin: 6px 0;
-        background: rgba(255,255,255,0.08);
+        background: rgba(255, 255, 255, 0.08);
     }
 
     .site-nav__icon-link {
@@ -718,6 +713,7 @@ a img { border: 0; outline: none; }
 
 // Mobile e abaixo (≤768px)
 @media (max-width: $screen-md) {
+
     // Header
     .site-header {
         &__logo {
@@ -791,16 +787,9 @@ a img { border: 0; outline: none; }
         }
     }
 
-    // Páginas BEM
-    .docs-page { flex-direction: column; padding: 10px; }
-    .docs-page__sidenav { width: auto; margin: 0; padding: 10px; text-align: left; border: 1px solid #ccc; }
-
-    .tutorial-page { flex-direction: column-reverse; padding: 10px; min-height: auto; }
-    .tutorial-page__sidenav { width: auto; margin: 0; padding: 10px; text-align: left; border: 1px solid #ccc; }
-    .tutorial-page__main .pagination { font-size: 16px; }
-    .tutorial-page__main .pagination a img { width: 18px; }
-
-    .community-page__main iframe { width: 100%; }
+    .community-page__main iframe {
+        width: 100%;
+    }
 }
 
 // Impedir scroll do body quando o menu mobile está aberto

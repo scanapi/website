@@ -1,9 +1,3 @@
-collections:
-  tutorials:
-    output: true
-  docs_v1:
-    output: true
-
 markdown: kramdown
 
 kramdown:
