@@ -1,8 +1,8 @@
 - name: Home
   link: /
 - name: Docs
-  link: /docs.html
+  link: https://scanapi.readthedocs.io/en/latest/user-guide/docs/
 - name: Tutorial
-  link: /tutorials/step01.html
+  link: https://scanapi.readthedocs.io/en/latest/user-guide/tutorial/
 - name: Community
   link: /community.html

@@ -16,10 +16,6 @@
                             {%- assign is_current = false -%}
                             {%- if page.url == item.link -%}
                                 {%- assign is_current = true -%}
-                            {%- elsif page.layout == 'docs' and item.link == '/docs.html' -%}
-                                {%- assign is_current = true -%}
-                            {%- elsif page.layout == 'tutorial' and item.name == 'Tutorial' -%}
-                                {%- assign is_current = true -%}
                             {%- elsif page.layout == 'community' and item.link == '/community.html' -%}
                                 {%- assign is_current = true -%}
                             {%- endif -%}
