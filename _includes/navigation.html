@@ -11,18 +11,6 @@
 
             <div class="collapse navbar-collapse site-header__collapse justify-content-end" id="navbar-collapse">
                 <ul class="navbar-nav site-nav mb-2 mb-lg-0">
-                    {% for item in site.data.navigation %}
-                        <li class="site-nav__item">
-                            {%- assign is_current = false -%}
-                            {%- if page.url == item.link -%}
-                                {%- assign is_current = true -%}
-                            {%- elsif page.layout == 'community' and item.link == '/community.html' -%}
-                                {%- assign is_current = true -%}
-                            {%- endif -%}
-                            <a href="{{ item.link | relative_url}}" class="nav-item site-nav__link{% if is_current %} current{% endif %}">{{ item.name }}</a>
-                        </li>
-                    {% endfor %}
-
                     <li class="site-nav__item site-nav__item--dropdown">
                         <a class="nav-item site-nav__link site-nav__link--dropdown" href="#" role="button">
                             Resources
@@ -31,13 +19,22 @@
                             </svg>
                         </a>
                         <ul class="site-nav__dropdown">
-                            <li><a class="site-nav__dropdown-link" href="https://github.com/scanapi/examples" target="_blank">
+                            <li><a class="site-nav__dropdown-link" href="https://scanapi.readthedocs.io/en/latest/" target="_blank">
                                 <span class="site-nav__dropdown-icon-wrapper">📚</span>
+                                <span class="site-nav__dropdown-text">
+                                    <strong>Documentation</strong>
+                                    <small>For Users, Contributors, and Maintainers</small>
+                                </span>
+                            </a></li>
+
+                            <li><a class="site-nav__dropdown-link" href="https://github.com/scanapi/examples" target="_blank">
+                                <span class="site-nav__dropdown-icon-wrapper">💡</span>
                                 <span class="site-nav__dropdown-text">
                                     <strong>Examples</strong>
                                     <small>Sample API specifications</small>
                                 </span>
                             </a></li>
+
                             <li><a class="site-nav__dropdown-link" href="https://github.com/marketplace/actions/scanapi" target="_blank">
                                 <span class="site-nav__dropdown-icon-wrapper">⚡</span>
                                 <span class="site-nav__dropdown-text">
@@ -45,6 +42,7 @@
                                     <small>CI/CD integration</small>
                                 </span>
                             </a></li>
+
                             <li><a class="site-nav__dropdown-link" href="https://marketplace.visualstudio.com/items?itemName=ScanAPI.scanapi" target="_blank">
                                 <span class="site-nav__dropdown-icon-wrapper">🔌</span>
                                 <span class="site-nav__dropdown-text">
